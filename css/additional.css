@@ -36,7 +36,7 @@
     height: 33px;
 }
 
-#personnel_num {
+#guest_num {
     color: #2493e0;
     text-align: center;
     border: none;
@@ -50,7 +50,7 @@
     color: #2493e0;
 }
 
-.personnel_text {
+.guest_text {
     margin-left: 18px;
     margin-right: 5px;
     color: #2493e0;

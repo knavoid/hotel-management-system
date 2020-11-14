@@ -12,19 +12,22 @@ function room_increase() {
     rooms.value = num;
 }
 
-function personnel_decrease() {
-    var personnel = document.getElementById("personnel_num");
-    var num = personnel.value;
+function guest_decrease() {
+    var guest = document.getElementById("guest_num");
+    var num = guest.value;
     if (num > 1) num--;
-    personnel.value = num;
+    guest.value = num;
 }
 
-function personnel_increase() {
-    var personnel = document.getElementById("personnel_num");
-    var num = personnel.value;
-    if (num < 50) num++;
-    personnel.value = num;
+function guest_increase() {
+    var guest = document.getElementById("guest_num");
+    var num = guest.value;
+    if (num < 40) num++;
+    guest.value = num;
 }
+
+
+
 
 // setting check in date & check out date
 var today = new Date();
@@ -57,7 +60,7 @@ function isValidDate() {
         cid.focus();
         return false;
     }
-    else if (parseInt(cid_array[1]) <= dd){
+    else if (parseInt(cid_array[0]) == mm && parseInt(cid_array[1]) <= dd){
         alert("Check-in dates can only be selected after today.")
         cid.focus();
         return false;
@@ -74,7 +77,7 @@ function isValidDate() {
         cod.focus();
         return false;
     }
-    else if (parseInt(cod_array[1]) <= parseInt(cid_array[1])) {
+    else if (parseInt(cod_array[0]) == parseInt(cid_array[0]) && parseInt(cod_array[1]) <= parseInt(cid_array[1])) {
         alert("Check-out dates can only be selected after check-in dates.")
         cod.focus();
         return false;
