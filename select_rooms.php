@@ -116,23 +116,6 @@
     <section class="about_us section_padding">
         <div class="container">
 
-
-            <!-- 방 선택해서 예약하는 공간 -->
-            <h2 style="padding-right:10pt;">Rooms:  <?=$_POST['rooms']?> </h2>
-            <h2 style="padding-right:10pt;">Date: <?=$_POST['check_in_date']?> ~ <?=$_POST['check_out_date']?> </h2>
-            <h2 style="padding-right:10pt;">Guests: <?=$_POST['guests']?> </h2>
-
-            <form action="reservation.php" method="post">
-                <input type="checkbox" name="rooms[]" value="101"> 101
-                <input type="checkbox" name="rooms[]" value="102"> 102
-                <input type="checkbox" name="rooms[]" value="103"> 103
-                <input type="checkbox" name="rooms[]" value="104"> 104
-                <input type="checkbox" name="rooms[]" value="105"> 105
-                <input type="submit" value="GO!"> 
-            </form>
-
-            <p id="selected_dates"></p>
-
             <?php
                 // 체크인 날짜부터 체크아웃 날짜까지의 날짜들을 배열안에 저장
                 $dates = array();
@@ -150,13 +133,58 @@
                 }
                 array_push($dates, $cod);
 
-                echo "<p>" . count($dates) ."days " . (count($dates) - 1) . "nights</p>";
-
+                $_SESSION['guests'] = $_POST['guests'];
                 $_SESSION['dates'] = serialize($dates);
-
             ?>
 
+
+
+            <!--------------------------- 예약 정보 / 객실 선택 폼 css 작업 부탁드립니다. --------------------->
+
+
+
+            <!-- 예약 기본 정보 -->
+            <h2 style="padding-right:10pt;">Rooms:  <?=$_POST['rooms']?> </h2>
+            <h2 style="padding-right:10pt;">Date: <?=$_POST['check_in_date']?> ~ <?=$_POST['check_out_date']?> </h2>
+            <h2 style="padding-right:10pt;">Guests: <?=$_POST['guests']?> </h2>
+            <p> <?= count($dates) ?> days <?= count($dates) - 1 ?> nights </p>
+
+
+            <!-- 객실 선택을 위한 checkbox -->
+            <form action="reservation.php" method="post">
+                <input type="checkbox" name="rooms[]" value="101"> 101
+                <input type="checkbox" name="rooms[]" value="102"> 102
+                <input type="checkbox" name="rooms[]" value="103"> 103
+                <input type="checkbox" name="rooms[]" value="104"> 104
+                <input type="checkbox" name="rooms[]" value="105"> 105
+                <input type="checkbox" name="rooms[]" value="106"> 106
+                <input type="checkbox" name="rooms[]" value="107"> 107
+                <input type="checkbox" name="rooms[]" value="108"> 108
+                <input type="checkbox" name="rooms[]" value="109"> 109
+                <input type="checkbox" name="rooms[]" value="110"> 110 <br/>
+                <input type="checkbox" name="rooms[]" value="201"> 201
+                <input type="checkbox" name="rooms[]" value="202"> 202
+                <input type="checkbox" name="rooms[]" value="203"> 203
+                <input type="checkbox" name="rooms[]" value="204"> 204
+                <input type="checkbox" name="rooms[]" value="205"> 205
+                <input type="checkbox" name="rooms[]" value="206"> 206
+                <input type="checkbox" name="rooms[]" value="207"> 207
+                <input type="checkbox" name="rooms[]" value="208"> 208
+                <input type="checkbox" name="rooms[]" value="209"> 209
+                <input type="checkbox" name="rooms[]" value="210"> 210 <br/>
+                <input type="submit" value="Book Now"> 
+            </form>
+
+            <p id="selected_dates"></p>
+
                 
+
+            <!---------------------------------------------------------------------------------------->
+
+
+
+
+            
         </div>
     </section>
     <!-- about us css end-->
@@ -261,6 +289,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/contact.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    <script src="room_select.js"></script>
 </body>
 
 </html>

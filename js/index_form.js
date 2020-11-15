@@ -1,3 +1,5 @@
+// 객실 수와 투숙객의 수 선택
+
 function room_decrease() {
     var rooms = document.getElementById("rooms_num");
     var num = rooms.value;
@@ -25,8 +27,6 @@ function guest_increase() {
     if (num < 40) num++;
     guest.value = num;
 }
-
-
 
 
 // setting check in date & check out date
