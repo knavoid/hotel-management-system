@@ -487,14 +487,14 @@ ul {
   text-transform: capitalize;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #fe5c24;
+  background-color: #2493e0;
   font-weight: 500;
 }
 
 /* line 35, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_button.scss */
 .btn_1:hover, .btn_2:hover {
   color: #fff;
-  background-color: #2493e0;
+  background-color: #fe5c24;
 }
 
 @media (max-width: 991px) {
