@@ -1,0 +1,9 @@
+CREATE TABLE `cleaning` (
+`code` int(20) NOT NULL AUTO_INCREMENT,
+`ttime` datetime NOT NULL,
+`rnumber` Int(8) NOT NULL,
+`staff_id` varchar(20) NOT NULL,
+PRIMARY KEY(`code`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+

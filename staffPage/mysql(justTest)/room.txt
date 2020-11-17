@@ -1,0 +1,73 @@
+CREATE TABLE `room` (
+`rnumber` int(8) NOT NULL,
+`rtype` varchar(20) NOT NULL,
+`isEmpty` tinyint NOT NULL,
+`clean` tinyint NOT NULL,
+PRIMARY KEY(`rnumber`),
+FOREIGN KEY(`rtype`) REFERENCES room_type(`rtype`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO room VALUES (201, '패밀리', 1, 1);
+INSERT INTO room VALUES (202, '패밀리', 1, 1);
+INSERT INTO room VALUES (203, '스탠다드', 1, 1);
+INSERT INTO room VALUES (204, '스탠다드', 1, 1);
+INSERT INTO room VALUES (205, '패밀리', 1, 1);
+INSERT INTO room VALUES (206, '패밀리', 1, 1);
+INSERT INTO room VALUES (207, '스탠다드', 1, 1);
+INSERT INTO room VALUES (208, '스탠다드', 1, 1);
+INSERT INTO room VALUES (301, '패밀리', 1, 1);
+INSERT INTO room VALUES (302, '패밀리', 1, 1);
+INSERT INTO room VALUES (303, '스탠다드', 1, 1);
+INSERT INTO room VALUES (304, '스탠다드', 1, 1);
+INSERT INTO room VALUES (305, '패밀리', 1, 1);
+INSERT INTO room VALUES (306, '패밀리', 1, 1);
+INSERT INTO room VALUES (307, '스탠다드', 1, 1);
+INSERT INTO room VALUES (308, '스탠다드', 1, 1);
+INSERT INTO room VALUES (401, '패밀리', 1, 1);
+INSERT INTO room VALUES (402, '패밀리', 1, 1);
+INSERT INTO room VALUES (403, '스탠다드', 1, 1);
+INSERT INTO room VALUES (404, '스탠다드', 1, 1);
+INSERT INTO room VALUES (405, '패밀리', 1, 1);
+INSERT INTO room VALUES (406, '패밀리', 1, 1);
+INSERT INTO room VALUES (407, '스탠다드', 1, 1);
+INSERT INTO room VALUES (408, '스탠다드', 1, 1);
+INSERT INTO room VALUES (501, '패밀리', 1, 1);
+INSERT INTO room VALUES (502, '패밀리', 1, 1);
+INSERT INTO room VALUES (503, '스탠다드', 1, 1);
+INSERT INTO room VALUES (504, '스탠다드', 1, 1);
+INSERT INTO room VALUES (505, '패밀리', 1, 1);
+INSERT INTO room VALUES (506, '패밀리', 1, 1);
+INSERT INTO room VALUES (507, '스탠다드', 1, 1);
+INSERT INTO room VALUES (508, '스탠다드', 1, 1);
+INSERT INTO room VALUES (601, '패밀리', 1, 1);
+INSERT INTO room VALUES (602, '패밀리', 1, 1);
+INSERT INTO room VALUES (603, '스탠다드', 1, 1);
+INSERT INTO room VALUES (604, '스탠다드', 1, 1);
+INSERT INTO room VALUES (605, '패밀리', 1, 1);
+INSERT INTO room VALUES (606, '패밀리', 1, 1);
+INSERT INTO room VALUES (607, '스탠다드', 1, 1);
+INSERT INTO room VALUES (608, '스탠다드', 1, 1);
+INSERT INTO room VALUES (701, '디럭스', 1, 1);
+INSERT INTO room VALUES (702, '디럭스', 1, 1);
+INSERT INTO room VALUES (703, '디럭스', 1, 1);
+INSERT INTO room VALUES (704, '디럭스', 1, 1);
+INSERT INTO room VALUES (705, '디럭스', 1, 1);
+INSERT INTO room VALUES (706, '디럭스', 1, 1);
+INSERT INTO room VALUES (707, '디럭스', 1, 1);
+INSERT INTO room VALUES (708, '디럭스', 1, 1);
+INSERT INTO room VALUES (801, '디럭스', 1, 1);
+INSERT INTO room VALUES (802, '디럭스', 1, 1);
+INSERT INTO room VALUES (803, '디럭스', 1, 1);
+INSERT INTO room VALUES (804, '디럭스', 1, 1);
+INSERT INTO room VALUES (805, '디럭스', 1, 1);
+INSERT INTO room VALUES (806, '디럭스', 1, 1);
+INSERT INTO room VALUES (807, '디럭스', 1, 1);
+INSERT INTO room VALUES (808, '디럭스', 1, 1);
+
+
+
+
+
+
+
+

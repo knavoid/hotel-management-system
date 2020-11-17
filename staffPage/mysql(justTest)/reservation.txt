@@ -1,0 +1,24 @@
+CREATE TABLE `reservation` (
+`code` int(20) NOT NULL,
+`id` varchar(20) NOT NULL,
+`rnumber` Int(8) NOT NULL,
+`nAdults` int(10) NOT NULL,
+`nKids` int(10) NOT NULL,
+`checkIn` date NOT NULL,
+`checkOut` date NOT NULL,
+PRIMARY KEY(`code`),
+FOREIGN KEY(`id`) REFERENCES customer_info(`id`),
+FOREIGN KEY(`rnumber`) REFERENCES room(`rnumber`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO reservation VALUES (1111111, 'c1', 101, 2, 0, '2020-11-10', '2020-11-11');
+INSERT INTO reservation VALUES (1111112, 'c2', 201, 1, 0, '2020-11-10', '2020-11-12');
+INSERT INTO reservation VALUES (1111113, 'c3', 301, 4, 1, '2020-11-10', '2020-11-14');
+INSERT INTO reservation VALUES (1111114, 'c4', 401, 2, 0, '2020-11-13', '2020-11-14');
+INSERT INTO reservation VALUES (1111115, 'c5', 501, 2, 1, '2020-11-10', '2020-11-13');
+INSERT INTO reservation VALUES (1111116, 'c6', 601, 2, 0, '2020-11-10', '2020-11-11');
+INSERT INTO reservation VALUES (1111117, 'c1', 701, 2, 0, '2020-11-11', '2020-11-12');
+INSERT INTO reservation VALUES (1111118, 'c2', 101, 2, 0, '2020-11-11', '2020-11-12');
+INSERT INTO reservation VALUES (1111119, 'c3', 201, 2, 1, '2020-11-12', '2020-11-13');
+INSERT INTO reservation VALUES (1111120, 'c4', 301, 3, 0, '2020-11-08', '2020-11-10');
+INSERT INTO reservation VALUES (1111121, 'c5', 401, 2, 0, '2020-11-07', '2020-11-10');
