@@ -1,8 +1,9 @@
 <?php 
-    include 'basic.php';
     session_start();
-    
-    $db = connectDB();
+
+    $db = new PDO("mysql:dbname=HMS; host=localhost; port=3306", "root", "a12345");
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     $code = $_POST['attendance'];
     $staff_id = $_SESSION['staff_id'];
     $q_staff_id = $db->quote($staff_id);

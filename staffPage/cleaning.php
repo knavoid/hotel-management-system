@@ -1,6 +1,4 @@
 <?php include 'basic.php';
-    $db = connectDB();
-
     $rnumber = $_POST['rnumber'];
     $staff_id = $_POST['selected_staff'];
     $q_rnumber = $db->quote($rnumber);
@@ -13,6 +11,6 @@
     $db->exec($str);
     $db->exec($str2);
 
-    print "<script language=javascript> alert('청소배정이 완료되었습니다.'); location.replace('managerMain.php'); </script>";
+    print "<script language=javascript> alert('청소배정이 완료되었습니다.'); history.back(); </script>";
     exit;
 ?>

@@ -1,7 +1,5 @@
 <?php
     include 'basic.php';
-    session_start();
-    $db = connectDB();
 
     $rnumber = $_POST['checkin'];
     $staff_id = $_SESSION['staff_id'];
@@ -16,7 +14,7 @@
     $db->exec($str);
     $db->exec($str2);
 
-    print "<script language=javascript> alert('체크인 되었습니다.'); location.replace('receptionistMain.php'); </script>";
+    print "<script language=javascript> alert('체크인 되었습니다.'); history.back(); </script>";
     exit;
 
 ?>

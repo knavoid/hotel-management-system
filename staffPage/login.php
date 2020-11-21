@@ -15,22 +15,21 @@
         	if($result[$i]["id"] == $ID and $result[$i]["pw"] == $PW){
                 switch($result[$i]["department"]){
                     case "manager":
-                        header("Location: managerMain.php");
+                        header("Location: managerT1.php");
                         break;
                     case "roomkeeper":
-                        header("Location: roomKeeperMain.php");
+                        header("Location: roomKeeperT1.php");
                         break;
                     case "receptionist":
-                        header("Location: receptionistMain.php");        
+                        header("Location: receptionistT1.php");        
                         break;
                 }
-                $_SESSION['staff_name'] = $result[$i]["sname"];
                 $_SESSION['staff_id'] = $result[$i]["id"];
                 exit;
         	}
         }
          
-        print "<script language=javascript> alert('회원정보가 일치하지 않습니다.'); location.replace('index.html'); </script>";
+        print "<script language=javascript> alert('회원정보가 일치하지 않습니다.'); history.back(); </script>";
         exit;
 
 
