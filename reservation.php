@@ -1,15 +1,14 @@
 <?php
     session_start();
+    include 'init.php';
 
-    $customer = 'ksh';
+    $customer = $_SESSION['customer_id'];
     $rooms = $_POST['rooms'];
     $dates = unserialize($_SESSION['dates']);
     $guests = $_SESSION['guests'];
         
     try {
-        $db = new PDO("mysql:dbname=hotel; host=localhost; port=3306", "root", "root");
-        $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); 
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $db = connectDB();
 
         $customer = $db->quote($customer);
         $guests = $db->quote($guests);
@@ -35,5 +34,5 @@
     }
     
     echo "<script> alert('Your reservation has been received!'); </script>";
-    echo "<script> location.href='index.html'; </script>";
+    echo "<script> location.href='main.php'; </script>";
 ?>

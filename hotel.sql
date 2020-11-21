@@ -8,29 +8,38 @@ DROP TABLE reservation_date;
 
 DROP TABLE room;
 
+DROP TABLE customer;
+
 CREATE TABLE reservation (
-	id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id 			INTEGER AUTO_INCREMENT PRIMARY KEY,
 	customer_id VARCHAR(30) NOT NULL,
-	num_guests INTEGER NOT NULL
+	num_guests 	INTEGER NOT NULL
 );
 
 CREATE TABLE reservation_room (
-	room_number INTEGER NOT NULL,
-	reservation_id INTEGER NOT NULL,
+	room_number 	INTEGER,
+	reservation_id 	INTEGER,
 	PRIMARY KEY(room_number, reservation_id)
 );
 
 CREATE TABLE reservation_date (
-	use_date DATE NOT NULL,
-	reservation_id INTEGER NOT NULL,
+	use_date		 DATE,
+	reservation_id	 INTEGER,
 	PRIMARY KEY(use_date, reservation_id)
 );
 
 CREATE TABLE room (
-	room_number INTEGER NOT NULL PRIMARY KEY,
-	type VARCHAR(20) NOT NULL,
-	isAvailable BOOLEAN NOT NULL, 
-	isEmpty BOOLEAN NOT NULL
+	room_number	INTEGER PRIMARY KEY,
+	type 		VARCHAR(20) NOT NULL,
+	isAvailable	BOOLEAN NOT NULL, 
+	isEmpty 	BOOLEAN NOT NULL
+);
+
+CREATE TABLE customer (
+	id 			VARCHAR(20) PRIMARY KEY,
+	password	VARCHAR(20) NOT NULL,
+	name 		VARCHAR(20) NOT NULL,
+	phone 		VARCHAR(20) NOT NULL
 );
 
 -- SELECT rr.reservation_id, rr.room_number, rd.use_date

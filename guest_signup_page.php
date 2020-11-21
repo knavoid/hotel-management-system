@@ -41,7 +41,7 @@
                     <div class="row align-items-center ">
                         <div class="col-lg-12">
                             <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                                <a class="navbar-brand" href="main.php"> <img src="img/logo.png" alt="logo"> </a>
+                                <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
                                     id="navbarSupportedContent">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="main.php">Home</a>
+                                            <a class="nav-link" href="index.html">Home</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="about.html">About</a>
@@ -88,7 +88,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="#" class="btn_1 d-none d-lg-block">book now</a>
                             </nav>
                         </div>
                     </div>
@@ -104,8 +103,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item text-center">
-                            <h2>Reservation</h2>
-                            <p>Select Room</p>
+                            <h2>Sign up</h2>
                         </div>
                     </div>
                 </div>
@@ -118,67 +116,34 @@
     <section class="about_us section_padding">
         <div class="container">
 
-            <?php
-                // 체크인 날짜부터 체크아웃 날짜까지의 날짜들을 배열안에 저장
-                $dates = array();
 
-                $cid = explode("/", $_POST['check_in_date']);
-                $cod = explode("/", $_POST['check_out_date']);
-
-                $cid = (string)$cid[2] . "-" . (string)$cid[0] . "-" . (string)$cid[1];
-                $cod = (string)$cod[2] . "-" . (string)$cod[0] . "-" . (string)$cod[1];
-
-                $date = $cid;
-                while ($date !== $cod) {
-                    array_push($dates, $date);
-                    $date = date("Y-m-d", strtotime($date . "+1 days"));
-                }
-                array_push($dates, $cod);
-
-                $_SESSION['guests'] = $_POST['guests'];
-                $_SESSION['dates'] = serialize($dates);
-            ?>
-            
-
-
-            <!-- 예약 기본 정보 -->
-            <h2 >Rooms: <?=$_POST['rooms']?> </h2>
-            <h2>Date: <?=$_POST['check_in_date']?> ~ <?=$_POST['check_out_date']?> </h2>
-            <h2>Guests: <?=$_POST['guests']?> </h2>
-            <p> <?= count($dates) ?> days <?= count($dates) - 1 ?> nights </p>
-            <p id="NOR" style="visibility:hidden"><?=$_POST['rooms']?></p>
-
-
-            <!-- 객실 선택을 위한 checkbox -->
-            <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
-                <input type="checkbox" id="room" name="rooms[]" value="101"> 101
-                <input type="checkbox" id="room" name="rooms[]" value="102"> 102
-                <input type="checkbox" id="room" name="rooms[]" value="103"> 103
-                <input type="checkbox" id="room" name="rooms[]" value="104"> 104
-                <input type="checkbox" id="room" name="rooms[]" value="105"> 105
-                <input type="checkbox" id="room" name="rooms[]" value="106"> 106
-                <input type="checkbox" id="room" name="rooms[]" value="107"> 107
-                <input type="checkbox" id="room" name="rooms[]" value="108"> 108
-                <input type="checkbox" id="room" name="rooms[]" value="109"> 109
-                <input type="checkbox" id="room" name="rooms[]" value="110"> 110 <br/>
-                <input type="checkbox" id="room" name="rooms[]" value="201"> 201
-                <input type="checkbox" id="room" name="rooms[]" value="202"> 202
-                <input type="checkbox" id="room" name="rooms[]" value="203"> 203
-                <input type="checkbox" id="room" name="rooms[]" value="204"> 204
-                <input type="checkbox" id="room" name="rooms[]" value="205"> 205
-                <input type="checkbox" id="room" name="rooms[]" value="206"> 206
-                <input type="checkbox" id="room" name="rooms[]" value="207"> 207
-                <input type="checkbox" id="room" name="rooms[]" value="208"> 208
-                <input type="checkbox" id="room" name="rooms[]" value="209"> 209
-                <input type="checkbox" id="room" name="rooms[]" value="210"> 210 <br/>
-                <input type="submit" value="Book Now"> 
-            </form>
-            
-            
-            <p id="selected_dates"></p>
-
-
-
+        <form name="HMS" method="POST" action="guest_signup.php" onsubmit="return checkInformation()">
+            <div class="field">
+                <label for="name">ID</label>
+                <input type="text" maxlength="20" name="id" id="id"/>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" maxlength="20" name="pw" id="password"/>
+            </div>
+            <div class="field">
+                <label for="password2">Confirm Password</label>
+                <input type="password" maxlength="20" name="pw2" id="password2"/>
+            </div>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" maxlength="20" name="name" id="name"/>
+            </div>
+            <div class="field">
+                <label for="phone">Phone</label>
+                <input type="text" maxlength="11" name="phone" id="phone"/>
+            </div>
+            <ul class="actions">
+                <input type=submit value="Sign in" />
+                <input type=reset value="Reset" />
+            </ul>
+        </form>
+                    
 
             
         </div>
@@ -285,9 +250,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/contact.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
-    
-    <script src="js/room_select.js" type="text/javascript"></script>
-    
+
+    <script src="js/sign.js"></script>
+
 </body>
 
 </html>
