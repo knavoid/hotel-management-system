@@ -15,7 +15,7 @@
         	if ($result[$i]["id"] === $id && $result[$i]["password"] === $password) {
                 $_SESSION['customer_id'] = $result[$i]["id"];
                 $_SESSION['customer_name'] = $result[$i]["name"];
-                header("Location: main.php");
+                header("Location: ../main.php");
                 exit;
         	}
         }
@@ -25,5 +25,5 @@
     }
 
     echo "<script> alert('Member information does not match.'); </script>";
-    echo "<script> location.href='guest_signin_page.php'; </script>";
+    echo "<script> location.href='../guest_signin_page.php'; </script>";
 ?>

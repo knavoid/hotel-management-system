@@ -89,7 +89,7 @@
                             </div>
                             <div>
                                 <p><?= $_SESSION['customer_name'] ?>님</p>
-                                <a href="guest_signout.php" class="btn_1 d-none d-lg-block">Sign out</a>
+                                <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign out</a>
                             </div>
                         </nav>
                     </div>

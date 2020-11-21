@@ -150,7 +150,7 @@
 
 
             <!-- 객실 선택을 위한 checkbox -->
-            <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
+            <form action="action/reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
                 <input type="checkbox" id="room" name="rooms[]" value="101"> 101
                 <input type="checkbox" id="room" name="rooms[]" value="102"> 102
                 <input type="checkbox" id="room" name="rooms[]" value="103"> 103

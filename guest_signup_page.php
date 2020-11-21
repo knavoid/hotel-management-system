@@ -117,7 +117,7 @@
         <div class="container">
 
 
-        <form name="HMS" method="POST" action="guest_signup.php" onsubmit="return checkInformation()">
+        <form name="HMS" method="POST" action="action/guest_signup.php" onsubmit="return checkInformation()">
             <div class="field">
                 <label for="name">ID</label>
                 <input type="text" maxlength="20" name="id" id="id"/>

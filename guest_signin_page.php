@@ -115,7 +115,7 @@
     <!-- about us css start-->
     <section class="about_us section_padding">
         <div class="container">
-            <form action="guest_signin.php" method="POST">
+            <form action="action/guest_signin.php" method="POST">
                 <input type="text" id="id" name="id">
                 <input type="PASSWORD" id="pw" name="pw">
                 <button id="login"> Sign in </button>        

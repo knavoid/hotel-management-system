@@ -17,7 +17,7 @@
         for ($i = 0; $i < count($result); $i++) {
             if ($result[$i]["id"] === $id) {
                 echo "<script> alert('The ID already exists. Please try a different ID.'); </script>";
-                echo "<script> location.href='guest_signup_page.php'; </script>";
+                echo "<script> location.href='../guest_signup_page.php'; </script>";
                 exit;
             }
         }
@@ -30,5 +30,5 @@
     }
     
     echo "<script> alert('Sign up completed!'); </script>";
-    echo "<script> location.href='guest_signin_page.php'; </script>";
+    echo "<script> location.href='../guest_signin_page.php'; </script>";
 ?>
