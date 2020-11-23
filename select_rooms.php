@@ -42,56 +42,54 @@
 <body>
     <!--::header part start::-->
     <header class="main_menu">
-            <div class="main_menu_iner">
-                <div class="container">
-                    <div class="row align-items-center ">
-                        <div class="col-lg-12">
-                            <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                                <a class="navbar-brand" href="main.php"> <img src="img/logo.png" alt="logo"> </a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-    
-                                <div class="collapse navbar-collapse main-menu-item justify-content-center"
-                                    id="navbarSupportedContent">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="main.php">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="about.html">About</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="packages.html">packages</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="contact.html">Contact</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-											role="button" data-toggle="dropdown" aria-haspopup="true"
-											aria-expanded="false">
-											My Page
-										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="reservation_content.php">Reservation Contents</a>
-											<a class="dropdown-item" href="#">Complain</a>
-										</div>
+        <div class="main_menu_iner">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                            <a class="navbar-brand" href="main.php"> <img src="img/logo.png" alt="logo"> </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                                id="navbarSupportedContent">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="main.php">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="packages.html">packages</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contact</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            My Page
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="reservation_content.php">Reservation Contents</a>
+                                            <a class="dropdown-item" href="#">Complain</a>
+                                        </div>
 									</li>
-                                    </ul>
-                                </div>
-                                <a href="#" class="btn_1 d-none d-lg-block">book now</a>
-                            </nav>
-                        </div>
+                                </ul>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- Header part end-->
+        </div>
+    </header>
+    <!-- Header part end-->
 
-    <!-- breadcrumb start-->
     <section class="breadcrumb breadcrumb_bg">
         <div class="container">
             <div class="row">
@@ -106,9 +104,7 @@
             </div>
         </div>
     </section>
-    <!-- breadcrumb start-->
 
-    <!-- about us css start-->
     <section class="about_us section_padding">
         <div class="container">
 
@@ -177,7 +173,6 @@
             
         </div>
     </section>
-    <!-- about us css end-->
 
     <!-- footer part start-->
     <footer class="footer-area">
