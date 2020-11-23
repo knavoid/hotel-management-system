@@ -5,6 +5,63 @@
         echo "<script> alert('Available after sign in.'); </script>";
         echo "<script> location.href='guest_signin_page.php'; </script>";
     }
+    include 'action/init.php';
+
+    $id = $_SESSION['customer_id'];
+
+    $reserve_count = 0;
+    $reservation_id = array();
+    $num_guests = array();
+    $rooms = array();
+    $dates = array();
+
+    try {
+        $db = connectDB();
+
+        // 예약 번호를 배열에 저장
+        $rows1 = $db->query("SELECT * FROM reservation");
+        $result1 = $rows1->fetchAll();
+        
+        for ($i = 0; $i < count($result1); $i++) {
+            if ($result1[$i]["customer_id"] === $id) {
+                $reserve_count++;
+                array_push($reservation_id, $result1[$i]["id"]);
+                array_push($num_guests, $result1[$i]["num_guests"]);
+        	}
+        }
+        
+        // 각 예약 번호의 예약된 객실을 배열에 저장
+        for ($i = 0; $i < count($reservation_id); $i++) {
+
+            $rows2 = $db->query("SELECT * FROM reservation_room WHERE reservation_id = $reservation_id[$i]");
+            $result2 = $rows2->fetchAll();
+
+            $tmp = array();
+            for ($j = 0; $j < count($result2); $j++) {
+                array_push($tmp, $result2[$j]["room_number"]);
+            }
+
+            array_push($rooms, $tmp);
+        }
+
+        // 각 예약 번호의 예약된 날짜를 배열에 저장
+        for ($i = 0; $i < count($reservation_id); $i++) {
+
+            $rows3 = $db->query("SELECT * FROM reservation_date WHERE reservation_id = $reservation_id[$i]");
+            $result3 = $rows3->fetchAll();
+
+            $tmp = array();
+            for ($j = 0; $j < count($result3); $j++) {
+                array_push($tmp, $result3[$j]["use_date"]);
+            }
+
+            array_push($dates, $tmp);
+        }
+
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+
 ?>
 <html lang="en">
 
@@ -97,7 +154,7 @@
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item text-center">
                             <h2>Reservation Contents</h2>
-                            <p>Confirm / Change / Cancel the reservation</p>
+                            <p>Confirm / Cancel the reservation</p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +165,63 @@
     <section class="about_us section_padding">
         <div class="container">
 
-            
+            <?php
+
+                if ($reserve_count == 0) { ?>
+
+                    <!-- 예약 내용이 없을 경우 -->
+                    <h2>There is no reservation.</h2>
+
+                <?php } else { ?>
+
+                    <!-- 예약 내용이 1개 이상 있을 경우 -->
+
+                    <?php
+                        for ($i = 0; $i < $reserve_count; $i++) { ?>
+
+                            <!-- css 작업 부탁드립니다. -->
+                            <!--------------------------- 예약 1개 --------------------------->
+
+                            <div style="margin-bottom: 30px;">
+                                <h2>Reservation Code: <?= $reservation_id[$i] ?></h2>
+    
+                                <p>Guests: <?= $num_guests[$i] ?></p>
+                                
+                                <p>Rooms: 
+                                    <?php for ($j = 0; $j < count($rooms[$i]); $j++) { ?>
+                                        <?= $rooms[$i][$j] ?>
+                                        <?php if ($j != count($rooms[$i]) - 1) { ?>
+                                             /         
+                                        <?php } ?>
+                                    <?php } ?>
+                                </p>
+    
+                                <p>Dates: 
+                                    <?php for ($j = 0; $j < count($dates[$i]); $j++) { ?>
+                                        <?= $dates[$i][$j] ?>
+                                        <?php if ($j != count($dates[$i]) - 1) { ?>
+                                             /         
+                                        <?php } ?>
+                                    <?php } ?>
+                                </p>
+
+                                <form action="action/reservation_cancel.php" method="post">
+                                    <input type="hidden" name="reservation_id" value="<?= $reservation_id[$i] ?>">
+                                    <input type="submit" value="Cancel">
+                                </form>
+
+                                <hr>
+
+                            </div>
+
+                            <!------------------------------------------------------------->
+
+                        <?php }
+                    ?>
+
+                <?php }
+
+            ?>
             
         </div>
     </section>
