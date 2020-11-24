@@ -10,49 +10,36 @@
     $id = $_SESSION['customer_id'];
 
     $reserve_count = 0;
-    $reservation_id = array();
-    $num_guests = array();
+    $reservation_code = array();
     $rooms = array();
+    $num_guests = array();
     $dates = array();
 
     try {
         $db = connectDB();
 
-        // 예약 번호를 배열에 저장
+        // 예약 번호를 배열에 저장 / 그 예약 번호에 따른 객실번호와 인원수를 배열에 저장
         $rows1 = $db->query("SELECT * FROM reservation");
         $result1 = $rows1->fetchAll();
         
         for ($i = 0; $i < count($result1); $i++) {
-            if ($result1[$i]["customer_id"] === $id) {
+            if ($result1[$i]["id"] === $id) {
                 $reserve_count++;
-                array_push($reservation_id, $result1[$i]["id"]);
+                array_push($reservation_code, $result1[$i]["code"]);
+                array_push($rooms, $result1[$i]["rnumber"]);
                 array_push($num_guests, $result1[$i]["num_guests"]);
         	}
         }
-        
-        // 각 예약 번호의 예약된 객실을 배열에 저장
-        for ($i = 0; $i < count($reservation_id); $i++) {
 
-            $rows2 = $db->query("SELECT * FROM reservation_room WHERE reservation_id = $reservation_id[$i]");
+        // 각 예약 번호의 예약된 날짜를 배열에 저장
+        for ($i = 0; $i < count($reservation_code); $i++) {
+
+            $rows2 = $db->query("SELECT * FROM reservation_log WHERE code = $reservation_code[$i]");
             $result2 = $rows2->fetchAll();
 
             $tmp = array();
             for ($j = 0; $j < count($result2); $j++) {
-                array_push($tmp, $result2[$j]["room_number"]);
-            }
-
-            array_push($rooms, $tmp);
-        }
-
-        // 각 예약 번호의 예약된 날짜를 배열에 저장
-        for ($i = 0; $i < count($reservation_id); $i++) {
-
-            $rows3 = $db->query("SELECT * FROM reservation_date WHERE reservation_id = $reservation_id[$i]");
-            $result3 = $rows3->fetchAll();
-
-            $tmp = array();
-            for ($j = 0; $j < count($result3); $j++) {
-                array_push($tmp, $result3[$j]["use_date"]);
+                array_push($tmp, $result2[$j]["use_date"]);
             }
 
             array_push($dates, $tmp);
@@ -183,30 +170,16 @@
                             <!--------------------------- 예약 1개 --------------------------->
 
                             <div style="margin-bottom: 30px;">
-                                <h2>Reservation Code: <?= $reservation_id[$i] ?></h2>
+                                <h2>Reservation Code: <?= $reservation_code[$i] ?></h2>
     
-                                <p>Guests: <?= $num_guests[$i] ?></p>
+                                <p>Guests: <?= $num_guests[$i] ?> </p>
                                 
-                                <p>Rooms: 
-                                    <?php for ($j = 0; $j < count($rooms[$i]); $j++) { ?>
-                                        <?= $rooms[$i][$j] ?>
-                                        <?php if ($j != count($rooms[$i]) - 1) { ?>
-                                             /         
-                                        <?php } ?>
-                                    <?php } ?>
-                                </p>
+                                <p>Room Number: <?= $rooms[$i] ?> </p>
     
-                                <p>Dates: 
-                                    <?php for ($j = 0; $j < count($dates[$i]); $j++) { ?>
-                                        <?= $dates[$i][$j] ?>
-                                        <?php if ($j != count($dates[$i]) - 1) { ?>
-                                             /         
-                                        <?php } ?>
-                                    <?php } ?>
-                                </p>
+                                <p>Period: <?= $dates[$i][0] ?> ~ <?= $dates[$i][count($dates[$i]) - 1] ?> </p>
 
                                 <form action="action/reservation_cancel.php" method="post">
-                                    <input type="hidden" name="reservation_id" value="<?= $reservation_id[$i] ?>">
+                                    <input type="hidden" name="reservation_code" value="<?= $reservation_code[$i] ?>">
                                     <input type="submit" value="Cancel">
                                 </form>
 

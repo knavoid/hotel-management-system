@@ -1,14 +1,13 @@
 <?php
     include 'init.php';
 
-    $id = $_POST['reservation_id'];
+    $code = $_POST['reservation_code'];
         
     try {
         $db = connectDB();
 
-        $db->exec("DELETE FROM reservation WHERE id = $id");
-        $db->exec("DELETE FROM reservation_room WHERE reservation_id = $id");
-        $db->exec("DELETE FROM reservation_date WHERE reservation_id = $id");
+        $db->exec("DELETE FROM reservation WHERE code = $code");
+        $db->exec("DELETE FROM reservation_log WHERE code = $code");
 
     } catch (PDOException $e) {
         echo $e->getMessage();
