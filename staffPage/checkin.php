@@ -8,7 +8,7 @@
     $q_staff_id = $db->quote($staff_id);
     $q_checkin = $db->quote("CHECKIN");
 
-    $str = "UPDATE room SET isEmpty = 0 WHERE rnumber = ".$q_rnumber;
+    $str = "UPDATE room SET isEmpty = 0, clean = 0 WHERE rnumber = ".$q_rnumber;
     $str2 = "INSERT INTO task_log (ttime, rnumber, staff_id, tstatus)
              VALUE (NOW()," .$q_rnumber. "," .$q_staff_id. "," .$q_checkin. ")";
     $db->exec($str);

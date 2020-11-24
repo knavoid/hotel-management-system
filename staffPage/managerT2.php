@@ -3,10 +3,10 @@
 <?php
 include 'basic.php';
 
-$stmt2 = $db->query("SELECT id, sname, phone FROM staff_info WHERE department = 'receptionist' AND attendance = 1");
+$stmt2 = $db->query("SELECT id, sname, phone FROM staff WHERE department = 'receptionist' AND attendance = 1");
 $result2 = $stmt2->fetchAll();
 
-$stmt2_2 = $db->query("SELECT id, sname, phone FROM staff_info WHERE department = 'roomkeeper' AND attendance = 1");
+$stmt2_2 = $db->query("SELECT id, sname, phone FROM staff WHERE department = 'roomkeeper' AND attendance = 1");
 $result2_2 = $stmt2_2->fetchAll();
 ?>
 
@@ -109,6 +109,7 @@ $result2_2 = $stmt2_2->fetchAll();
                                 </form>
                             <?php }
                             ?>
+                            <p> <?= $staff_name ?> 님</p>
                             <a href="logout.php" class="genric-btn primary">로그아웃</a>
                             <!-- End 출퇴근 기능 -->
                         </nav>

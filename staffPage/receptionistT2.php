@@ -3,7 +3,7 @@
 <?php
 include 'basic.php';
 
-$stmt2 = $db->query("SELECT code, cname, id, rnumber, rtype, nAdults, nKids, phone, checkIn, checkOut, isEmpty, clean FROM reservation NATURAL JOIN customer_info NATURAL JOIN room WHERE checkIn=DATE(NOW()) ORDER BY cname");
+$stmt2 = $db->query("SELECT code, cname, id, rnumber, rtype, num_guests, phone, checkIn, checkOut, isEmpty, clean FROM reservation NATURAL JOIN customer NATURAL JOIN room WHERE checkIn=DATE(NOW()) ORDER BY cname");
 $result2 = $stmt2->fetchAll();
 ?>
 
@@ -100,6 +100,7 @@ $result2 = $stmt2->fetchAll();
                                 </form>
                             <?php }
                             ?>
+                            <p> <?= $staff_name ?> 님</p>
                             <a href="logout.php" class="genric-btn primary">로그아웃</a>
                             <!-- End 출퇴근 기능 -->
                         </nav>
@@ -149,7 +150,7 @@ $result2 = $stmt2->fetchAll();
                         <div class="serial"><?= $result2[$i]['cname'] ?></div>
                         <div class="serial"><?= $result2[$i]['id'] ?></div>
                         <div class="serial"><?= $result2[$i]['rnumber'] ?><br>(<?= $result2[$i]['rtype'] ?>)</div>
-                        <div class="serial"><?= $result2[$i]['nAdults'] ?></div>
+                        <div class="serial"><?= $result2[$i]['num_guests'] ?></div>
                         <div class="serial"><?= $result2[$i]['phone'] ?></div>
                         <div class="serial"><?= $result2[$i]['checkIn'] ?></div>
                         <div class="serial"><?= $result2[$i]['checkOut'] ?></div>
@@ -158,8 +159,10 @@ $result2 = $stmt2->fetchAll();
                             <form action='checkin.php' method='POST'>
                                 <button class="genric-btn info circle progress-bar" type='submit' name='checkin' id='checkin' value='<?= $result2[$i]['rnumber'] ?>'>가능</button>
                             </form>
-                        <?php } else { ?>
-                            <button class="genric-btn info-border circle progress-bar" type='submit' name='checkin' id='checkin' disabled>불가능</button>
+                        <?php } else if ($result2[$i]['isEmpty'] == 0 && $result2[$i]['clean'] == 0){ ?>
+                            <button class="genric-btn info-border circle progress-bar" type='submit' name='checkin' id='checkin' disabled>완료</button>
+                        <?php } else if ($result2[$i]['isEmpty'] == 1 && $result2[$i]['clean'] == 0) { ?>
+                            <button class="genric-btn info-border circle progress-bar" type='submit' name='checkin' id='checkin' disabled>불가</button>
                         <?php } ?>
                     </div>
                 <?php } ?>

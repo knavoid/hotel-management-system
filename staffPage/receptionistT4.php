@@ -2,9 +2,6 @@
 <html lang="en">
 <?php
 include 'basic.php';
-
-$stmt3 = $db->query("SELECT code, cname, id, rnumber, rtype, nAdults, nKids, phone, checkIn, checkOut, isEmpty, clean FROM reservation NATURAL JOIN customer_info NATURAL JOIN room WHERE checkOut=DATE(NOW()) OR (isEmpty = 0 AND checkIn<=DATE(NOW())) ORDER BY checkOut");
-$result3 = $stmt3->fetchAll();
 ?>
 
 <head>
@@ -100,6 +97,7 @@ $result3 = $stmt3->fetchAll();
                                 </form>
                             <?php }
                             ?>
+                            <p> <?= $staff_name ?> 님</p>
                             <a href="logout.php" class="genric-btn primary">로그아웃</a>
                             <!-- End 출퇴근 기능 -->
                         </nav>

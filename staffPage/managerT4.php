@@ -3,7 +3,7 @@
 <?php
 include 'basic.php';
 
-$stmt4 = $db->query("SELECT * FROM staff_info WHERE attendance = 1 AND department = 'roomkeeper'");
+$stmt4 = $db->query("SELECT * FROM staff WHERE attendance = 1 AND department = 'roomkeeper'");
 $result4 = $stmt4->fetchAll();
 
 $stmt4_2 = $db->query("SELECT * FROM complainment WHERE recept = 0 ORDER BY NOW()");
@@ -110,6 +110,7 @@ $result4_2 = $stmt4_2->fetchAll();
                                 </form>
                             <?php }
                             ?>
+                            <p> <?= $staff_name ?> 님</p>
                             <a href="logout.php" class="genric-btn primary">로그아웃</a>
                             <!-- End 출퇴근 기능 -->
                         </nav>

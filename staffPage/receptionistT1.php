@@ -3,7 +3,7 @@
 <?php
 include 'basic.php';
 
-$stmt = $db->query("SELECT code, cname, id, rnumber, nAdults, nKids, phone, checkIn, checkOut FROM reservation NATURAL JOIN customer_info WHERE checkIn >= DATE(NOW()) ORDER BY checkIn");
+$stmt = $db->query("SELECT code, cname, id, rnumber, num_guests, phone, checkIn, checkOut FROM reservation NATURAL JOIN customer WHERE checkIn >= DATE(NOW()) ORDER BY checkIn");
 $result = $stmt->fetchAll();
 ?>
 
@@ -100,6 +100,7 @@ $result = $stmt->fetchAll();
                                 </form>
                             <?php }
                             ?>
+                            <p> <?= $staff_name ?> 님</p>
                             <a href="logout.php" class="genric-btn primary">로그아웃</a>
                             <!-- End 출퇴근 기능 -->
                         </nav>
@@ -137,8 +138,7 @@ $result = $stmt->fetchAll();
                     <div class="serial">이름</div>
                     <div class="serial">ID</div>
                     <div class="serial">호실</div>
-                    <div class="serial">어른</div>
-                    <div class="serial">어린이</div>
+                    <div class="serial">인원</div>
                     <div class="serial">전화번호</div>
                     <div class="serial">체크인</div>
                     <div class="serial">체크아웃</div>
@@ -149,8 +149,7 @@ $result = $stmt->fetchAll();
                         <div class="serial"><?= $result[$i]['cname'] ?></div>
                         <div class="serial"><?= $result[$i]['id'] ?></div>
                         <div class="serial"><?= $result[$i]['rnumber'] ?></div>
-                        <div class="serial"><?= $result[$i]['nAdults'] ?></div>
-                        <div class="serial"><?= $result[$i]['nKids'] ?></div>
+                        <div class="serial"><?= $result[$i]['num_guests'] ?></div>
                         <div class="serial"><?= $result[$i]['phone'] ?></div>
                         <div class="serial"><?= $result[$i]['checkIn'] ?></div>
                         <div class="serial"><?= $result[$i]['checkOut'] ?></div>

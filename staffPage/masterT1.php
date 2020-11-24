@@ -3,7 +3,7 @@
 <?php
 include 'basic.php';
 
-$stmt = $db->query("SELECT * FROM cleaning WHERE staff_id =" . $q_staff_id);
+$stmt = $db->query("SELECT * FROM staff WHERE accept = 0");
 $result = $stmt->fetchAll();
 ?>
 
@@ -75,28 +75,14 @@ $result = $stmt->fetchAll();
                             <div class="collapse navbar-collapse main-menu-item justify-content-center" id="navbarSupportedContent">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="roomKeeperT1.php">할당된 청소</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="roomKeeperT2.php">고객접수</a>
+                                        <a class="nav-link" href="masterT1.php">직원 가입요청</a>
                                     </li>
                                 </ul>
                             </div>
-                            <!-- Start 출퇴근 기능 -->
-                            <?php
-                            if ($result_s[0]['attendance'] == 1) { ?>
-                                <form action='staffAttendance.php' method='POST'>
-                                    <button class="genric-btn primary" type='submit' name='attendance' value='f'>퇴근하기</button>
-                                </form>
-                            <?php } else { ?>
-                                <form action='staffAttendance.php' method='POST'>
-                                    <button class="genric-btn primary" type='submit' name='attendance' value='t'>출근하기</button>
-                                </form>
-                            <?php }
-                            ?>
+                            <!-- Start 로그아웃 기능 -->
                             <p> <?= $staff_name ?> 님</p>
                             <a href="logout.php" class="genric-btn primary">로그아웃</a>
-                            <!-- End 출퇴근 기능 -->
+                            <!-- End 로그아웃 기능 -->
                         </nav>
                     </div>
                 </div>
@@ -122,30 +108,39 @@ $result = $stmt->fetchAll();
     </section>
     <!-- breadcrumb start-->
 
-    <!-- Start 할당된 청소 현황 -->
+    <!-- Start 직원 회원가입 승인 -->
     <div class="section-top-border">
-        <h3 class="mb-30">할당된 청소</h3>
+        <h3 class="mb-30">요청된 직원가입</h3>
         <div class="progress-table-wrap">
             <div class="progress-table">
                 <div class="table-head">
-                    <div class="serial">접수시간</div>
-                    <div class="serial">방번호</div>
-                    <div class="serial">청소</div>
+                    <div class="serial">아이디</div>
+                    <div class="serial">이름</div>
+                    <div class="serial">전화번호</div>
+                    <div class="serial">부서</div>
+                    <div class="serial">승인</div>
+                    <div class="serial">거부</div>
                 </div>
                 <?php for ($i = 0; $i < count($result); $i++) { ?>
                     <div class="table-row">
-                        <div class="serial"><?= $result[$i]['ttime'] ?></div>
-                        <div class="serial"><?= $result[$i]['rnumber'] ?></div>
-                        <form action='cleaningComplete.php' method='POST'>
-                            <input type='hidden' name='rnumber' value='<?= $result[$i]['rnumber'] ?>'></input>
-                            <button class="genric-btn info circle progress-bar" type='submit' name='complete' value='<?= $result[$i]['code'] ?>'>완료</button>
+                        <div class="serial"><?= $result[$i]['id'] ?></div>
+                        <div class="serial"><?= $result[$i]['sname'] ?></div>
+                        <div class="serial"><?= $result[$i]['phone'] ?></div>
+                        <div class="serial"><?= $result[$i]['department'] ?></div>
+                        <form action='confirmSignUp.php' method='POST'>
+                            <input type = 'hidden' name='staff_id' value='<?= $result[$i]["id"] ?>'></input>
+                            <button class="genric-btn info circle progress-bar" type='submit' name='staffSignUp' value='t'>확인</button>
+                        </form>
+                        <form action='confirmSignUp.php' method='POST'>
+                            <input type = 'hidden' name='staff_id' value='<?= $result[$i]["id"] ?>'></input>
+                            <button class="genric-btn danger circle" type='submit' name='staffSignUp' value='f'>확인</button>
                         </form>
                     </div>
                 <?php } ?>
             </div>
         </div>
     </div>
-    <!-- End 할당된 청소 현황 -->
+    <!-- End 직원 회원가입 승인 -->
 
     <!-- footer part start-->
     <footer class="footer-area">

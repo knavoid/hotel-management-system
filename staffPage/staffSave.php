@@ -23,7 +23,7 @@
         $q_attendance = $db->quote(0);
         $q_department = $db->quote($department);
 
-        $rows = $db->query("SELECT * FROM staff_info");
+        $rows = $db->query("SELECT * FROM staff");
         $result = $rows->fetchAll();
         
         for($i = 0; $i < count($result); $i++){
@@ -33,11 +33,11 @@
             }
         }
 
-        $str = "INSERT INTO staff_info (id, pw, sname, phone, department, attendance) 
-                VALUE ($q_id, $q_password, $q_name, $q_phone, $q_department, $q_attendance)";
+        $str = "INSERT INTO staff (id, pw, sname, phone, department, attendance, accept) 
+                VALUE ($q_id, $q_password, $q_name, $q_phone, $q_department, $q_attendance, 0)";
         $db->exec($str);
 
-        print "<script language=javascript> alert('회원가입이 완료되었습니다.'); location.replace('staffMain.html'); </script>";
+        print "<script language=javascript> alert('관리자 승인 후 사용가능'); location.replace('staffMain.html'); </script>";
         exit;
 
     } catch (PDOException $ex) {

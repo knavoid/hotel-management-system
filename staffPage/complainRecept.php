@@ -1,4 +1,6 @@
-<?php include 'basic.php';
+<?php 
+    include 'basic.php';
+    
     $code = $_POST['recept'];
     $selected_staff_id = $_POST['selected_staff'];
 
