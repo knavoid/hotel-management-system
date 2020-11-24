@@ -14,7 +14,7 @@
         for ($i = 0; $i < count($result); $i++) {
         	if ($result[$i]["id"] === $id && $result[$i]["password"] === $password) {
                 $_SESSION['customer_id'] = $result[$i]["id"];
-                $_SESSION['customer_name'] = $result[$i]["name"];
+                $_SESSION['customer_name'] = $result[$i]["cname"];
                 header("Location: ../main.php");
                 exit;
         	}

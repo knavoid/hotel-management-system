@@ -141,16 +141,8 @@
 
             <!-- 객실 선택을 위한 checkbox -->
             <form action="action/reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
-                <input type="checkbox" id="room" name="rooms[]" value="101"> 101
-                <input type="checkbox" id="room" name="rooms[]" value="102"> 102
-                <input type="checkbox" id="room" name="rooms[]" value="103"> 103
-                <input type="checkbox" id="room" name="rooms[]" value="104"> 104
-                <input type="checkbox" id="room" name="rooms[]" value="105"> 105
-                <input type="checkbox" id="room" name="rooms[]" value="106"> 106
-                <input type="checkbox" id="room" name="rooms[]" value="107"> 107
-                <input type="checkbox" id="room" name="rooms[]" value="108"> 108
-                <input type="checkbox" id="room" name="rooms[]" value="109"> 109
-                <input type="checkbox" id="room" name="rooms[]" value="110"> 110 <br/>
+                <input type="hidden" name="cid" value="<?= $dates[0] ?>">
+                <input type="hidden" name="cod" value="<?= $dates[count($dates) - 1] ?>">
                 <input type="checkbox" id="room" name="rooms[]" value="201"> 201
                 <input type="checkbox" id="room" name="rooms[]" value="202"> 202
                 <input type="checkbox" id="room" name="rooms[]" value="203"> 203
@@ -158,9 +150,23 @@
                 <input type="checkbox" id="room" name="rooms[]" value="205"> 205
                 <input type="checkbox" id="room" name="rooms[]" value="206"> 206
                 <input type="checkbox" id="room" name="rooms[]" value="207"> 207
-                <input type="checkbox" id="room" name="rooms[]" value="208"> 208
-                <input type="checkbox" id="room" name="rooms[]" value="209"> 209
-                <input type="checkbox" id="room" name="rooms[]" value="210"> 210 <br/>
+                <input type="checkbox" id="room" name="rooms[]" value="208"> 208 <br/>
+                <input type="checkbox" id="room" name="rooms[]" value="301"> 301
+                <input type="checkbox" id="room" name="rooms[]" value="302"> 302
+                <input type="checkbox" id="room" name="rooms[]" value="303"> 303
+                <input type="checkbox" id="room" name="rooms[]" value="304"> 304
+                <input type="checkbox" id="room" name="rooms[]" value="305"> 305
+                <input type="checkbox" id="room" name="rooms[]" value="306"> 306
+                <input type="checkbox" id="room" name="rooms[]" value="307"> 307
+                <input type="checkbox" id="room" name="rooms[]" value="308"> 308 <br/>
+                <input type="checkbox" id="room" name="rooms[]" value="401"> 401
+                <input type="checkbox" id="room" name="rooms[]" value="402"> 402
+                <input type="checkbox" id="room" name="rooms[]" value="403"> 403
+                <input type="checkbox" id="room" name="rooms[]" value="404"> 404
+                <input type="checkbox" id="room" name="rooms[]" value="405"> 405
+                <input type="checkbox" id="room" name="rooms[]" value="406"> 406
+                <input type="checkbox" id="room" name="rooms[]" value="407"> 407
+                <input type="checkbox" id="room" name="rooms[]" value="408"> 408 <br/>
                 <input type="submit" value="Book Now"> 
             </form>
             

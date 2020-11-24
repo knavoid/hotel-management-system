@@ -3,30 +3,32 @@
     include 'init.php';
 
     $customer = $_SESSION['customer_id'];
-    $rooms = $_POST['rooms'];
     $dates = unserialize($_SESSION['dates']);
     $guests = $_SESSION['guests'];
-        
+    $rooms = $_POST['rooms'];
+    $cid = $_POST['cid'];
+    $cod = $_POST['cod'];
+    
+    
     try {
         $db = connectDB();
-
-        $customer = $db->quote($customer);
-        $guests = $db->quote($guests);
-        $db->exec("INSERT INTO reservation (customer_id, num_guests) VALUES ($customer, $guests)");
-
-        $rows = $db->query("SELECT * FROM reservation");
-        $reservation_id = count($rows->fetchAll());
         
-        for ($i = 0; $i < count($rooms); $i++) { 
-            $room = $rooms[$i];
-            $room = $db->quote($room);
-            $db->exec("INSERT INTO reservation_room (room_number, reservation_id) VALUES ($room, $reservation_id)");
-        }
+        $customer = $db->quote($customer);
+        $cid = $db->quote($cid);
+        $cod = $db->quote($cod);
 
-        for ($i = 0; $i < count($dates); $i++) { 
-            $date = $dates[$i];
-            $date = $db->quote($date);
-            $db->exec("INSERT INTO reservation_date (use_date, reservation_id) VALUES ($date, $reservation_id)");
+        for ($i = 0; $i < count($rooms); $i++) { 
+            
+            $db->exec("INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ($customer, $rooms[$i], $guests, $cid, $cod)");
+            
+            $rows = $db->query("SELECT * FROM reservation");
+            $result = $rows->fetchAll();
+            $code = $result[count($result) - 1]["code"];
+
+            for ($j = 0; $j < count($dates); $j++) { 
+                $date = $db->quote($dates[$j]);
+                $db->exec("INSERT INTO reservation_log VALUES($rooms[$i], $date, $code)");
+            }
         }
 
     } catch (PDOException $e) {
