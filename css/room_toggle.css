@@ -1,0 +1,27 @@
+.room_toggle {
+    float:left;
+}
+
+.room_toggle label span{
+    float:left;
+    width:100px;
+    overflow:auto;
+    background-color:#FFFFFF;
+    color: #2493e0;
+    min-height: 100% !important;
+    border: thin #2493e0 solid;
+    text-align:center;
+    font-size: 15px;
+    padding:5px 0px;
+    display:block;
+}
+
+.room_toggle label input {
+    display: none;
+}
+
+.room_toggle label input:checked +span{
+    border: thin #ffffff solid;
+    color: white;
+    background-color: #fe5c24;
+}
