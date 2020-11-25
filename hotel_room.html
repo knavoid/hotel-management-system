@@ -224,6 +224,26 @@
     <!-- body part -->
     <section class="about_us">
         <div class="container">
+            <?php
+                // 체크인 날짜부터 체크아웃 날짜까지의 날짜들을 배열안에 저장
+                $dates = array();
+
+                $cid = explode("/", $_POST['check_in_date']);
+                $cod = explode("/", $_POST['check_out_date']);
+
+                $cid = (string)$cid[2] . "-" . (string)$cid[0] . "-" . (string)$cid[1];
+                $cod = (string)$cod[2] . "-" . (string)$cod[0] . "-" . (string)$cod[1];
+
+                $date = $cid;
+                while ($date !== $cod) {
+                    array_push($dates, $date);
+                    $date = date("Y-m-d", strtotime($date . "+1 days"));
+                }
+                array_push($dates, $cod);
+
+                $_SESSION['guests'] = $_POST['guests'];
+                $_SESSION['dates'] = serialize($dates);
+            ?>
             <div class="row align-items-end body_padding">
                 <div class ="about_text col-lg-12"><h2>Standard</h2></div>
                 <div class="col-lg-6">
