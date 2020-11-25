@@ -1,19 +1,21 @@
 .room_toggle {
+    padding: 0px 10px;
     float:left;
 }
 
 .room_toggle label span{
-    float:left;
-    width:100px;
-    overflow:auto;
-    background-color:#FFFFFF;
-    color: #2493e0;
-    min-height: 100% !important;
-    border: thin #2493e0 solid;
-    text-align:center;
-    font-size: 15px;
-    padding:5px 0px;
-    display:block;
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid;
+  border-color: #2493e0;
+  border-radius: 0;
+  font-size: 16px;
+  color: #2493e0;
+  text-transform: capitalize;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: white;
+  font-weight: 500;
 }
 
 .room_toggle label input {
