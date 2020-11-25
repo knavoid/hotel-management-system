@@ -27,7 +27,10 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/additional.css">
+
+    <link rel="stylesheet" href="css/room_toggle.css">
 
 </head>
 
@@ -228,47 +231,107 @@
                         <img src="img/hotels/standard.jpg" alt="#">
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
-                    <div class="col-xs-1">
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '101' name = 'rooms[]' class = "btn_5" value='101'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '102' name = 'rooms[]' class = "btn_5" value='102'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '103' name = 'rooms[]' class = "btn_5" value='103'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '104' name = 'rooms[]' class = "btn_5" value='104'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '105' name = 'rooms[]' class = "btn_5" value='105'/>
+                <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
+                    <div class="room_toggle">
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='503'/><span>503</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='504'/><span>504</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='403'/><span>403</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='404'/><span>404</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='303'/><span>303</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='304'/><span>304</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='203'/><span>203</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='204'/><span>204</span></label>
+                        </div>
                     </div>
-                    <div class="col-xs-1 light_padding">
-                        
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '106' name = 'rooms[]' class = "btn_5" value='106'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '107' name = 'rooms[]' class = "btn_5" value='107'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '108' name = 'rooms[]' class = "btn_5" value='108'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '109' name = 'rooms[]' class = "btn_5" value='109'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '110' name = 'rooms[]' class = "btn_5" value='110'/>
-                    </div>
-                    <div class= "col-xs-1 light_padding">
-                        <input type="submit" onclick = 'show()' value="Book Now"> 
-                    </div>
-                </div>
 
+                    <div class="room_toggle">
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='507'/><span>507</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='508'/><span>508</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='407'/><span>407</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='408'/><span>408</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='307'/><span>307</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='308'/><span>308</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='207'/><span>207</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='208'/><span>208</span></label>
+                        </div>
+                    </div>
+
+                    <div class= "col-md-1 light_height_padding">
+                        <input type="submit" onclick = 'show()' value="Book Now">
+                    </div>
+                </form>
             </div>
-            <!--
-            <a href="#" class="btn_1">106</a>
-            <a href="#" class="btn_1">107</a>
-            <a href="#" class="btn_1">108</a>
-            <a href="#" class="btn_1">109</a>
-            <a href="#" class="btn_1">110</a>
-        -->
-            <div class="row align-items-center body_padding">
+        </div>
+
+        <div class="row align-items-end body_padding">
                 <div class ="about_text col-lg-12"><h2>Family</h2></div>
                 <div class="col-lg-6">
                     <div class="about_img">
-                        <img src="img/hotels/family.jpg" alt="#">
+                        <img src="img/hotels/Family.jpg" alt="#">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <a href="#" class="btn_1">Discover Now</a>
-                </div>
+                <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
+                    <div class="room_toggle">
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='503'/><span>501</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='504'/><span>502</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='403'/><span>401</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='404'/><span>402</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='303'/><span>301</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='304'/><span>302</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='203'/><span>201</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='204'/><span>202</span></label>
+                        </div>
+                    </div>
+
+                    <div class="room_toggle">
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='507'/><span>505</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='508'/><span>506</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='407'/><span>405</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='408'/><span>406</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='307'/><span>305</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='308'/><span>306</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='207'/><span>205</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='208'/><span>206</span></label>
+                        </div>
+                    </div>
+
+                    <div class= "col-md-1 light_height_padding">
+                        <input type="submit" onclick = 'show()' value="Book Now">
+                    </div>
+                </form>
             </div>
+        </div>
+
             <div class="row align-items-center body_padding">
                 <div class ="about_text col-lg-12"><h2>Deluxe</h2></div>
                 <div class="col-lg-6">
@@ -277,10 +340,33 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about_text">
-                    <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged night yielding land creeping that seed appear were bearing.</p>
+                <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
+                    <div class="room_toggle">
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='503'/><span>801</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='504'/><span>802</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='403'/><span>701</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='404'/><span>702</span></label>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="room_toggle">
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='507'/><span>803</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='508'/><span>804</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='407'/><span>703</span></label>
+                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='408'/><span>704</span></label>
+                        </div>
+                    </div>
+
+                    <div class= "col-md-1 light_height_padding">
+                        <input type="submit" onclick = 'show()' value="Book Now">
+                    </div>
+                </form>
             </div>      
         </div>
     </section>
