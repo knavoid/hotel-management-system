@@ -16,6 +16,7 @@
   transition: 0.5s;
   background-color: white;
   font-weight: 500;
+  cursor:pointer;
 }
 
 .room_toggle label input {
@@ -26,4 +27,5 @@
     border: thin #ffffff solid;
     color: white;
     background-color: #fe5c24;
+    cursor:pointer;
 }
