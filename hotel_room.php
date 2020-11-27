@@ -226,6 +226,7 @@
     <!-- body part -->
     <section class="hotel_room">
         <div class="container">
+            <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
             <?php
                 // 체크인 날짜부터 체크아웃 날짜까지의 날짜들을 배열안에 저장
                 $dates = array();
@@ -248,14 +249,14 @@
             ?>
 
             <div class="row align-items-end body_padding">
-                <div class ="about_text col-lg-12"><h2>Standard</h2></div>
+                <div class ="about_text col-lg-10"><h2>Standard</h2></div>                
+                <div class ="col-lg-1"> <input type="submit" class = "btn_1" value="다음 단계로"></div>
                 <div class="col-lg-6">
                     <div class="about_img">
                         <img src="img/hotels/standard.jpg" alt="#">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
                     
                     <div class="room_toggle">
                         <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
@@ -299,19 +300,18 @@
                     <!-- <div class= "col-md-1 light_height_padding">
                     <label for=""></label>
                     </div> -->
-                </form>
                 </div>
         </div>
 
         <div class="row align-items-end body_padding">
-                <div class ="about_text col-lg-12"><h2>Family</h2></div>
+                <div class ="about_text col-lg-10"><h2>Family</h2></div>
+                <div class ="col-lg-1"> <input type="submit" class = "btn_1" value="다음 단계로"></div>
                 <div class="col-lg-6">
                     <div class="about_img">
                         <img src="img/hotels/Family.jpg" alt="#">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
                     <div class="room_toggle">
                         <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
                         <div class="col-xs-3">
@@ -352,23 +352,18 @@
                             <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='206'/><span>206</span></label>
                         </div>
                     </div>
-
-                    <div class= "col-md-1 light_height_padding">
-                        <input type="submit" onclick = 'show()' value="Book Now">
-                    </div>
-                </form>
             </div>
         </div>
 
             <div class="row align-items-end body_padding">
-                <div class ="about_text col-lg-12"><h2>Deluxe</h2></div>
+                <div class ="about_text col-lg-10"><h2>Deluxe</h2></div>
+                <div class ="col-lg-1"> <input type="submit" class = "btn_1" value="다음 단계로"></div>
                 <div class="col-lg-6">
                     <div class="about_img">
                         <img src="img/hotels/delux.jpg" alt="#">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
                     <div class="room_toggle">
                         
                         <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
@@ -395,12 +390,9 @@
                             <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='704'/><span>704</span></label>
                         </div>
                     </div>
-
-                    <div class= "col-md-1 light_height_padding">
-                        <input type="submit" onclick = 'show()' value="Book Now">
-                    </div>
-                </form>
-            </div>      
+            </div>
+            <input type="submit" class = "btn_1 topic" value="다음 단계로"></div>    
+        </form>
         </div>
     </section>
     <!-- Header part end-->
