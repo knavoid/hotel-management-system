@@ -25,7 +25,13 @@
 
 .room_toggle label input:checked +span{
     border: thin #ffffff solid;
-    color: white;
+    color: white;   
     background-color: #fe5c24;
     cursor:pointer;
+}
+
+.room_toggle label input:disabled +span{
+    border: 1px solid #999999;
+    background-color: #2b2a2a;
+    color: #363636;
 }
