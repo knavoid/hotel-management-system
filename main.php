@@ -137,40 +137,33 @@
                                         <div class="form-row">
 
                                             <div class="form_colum">
-                                                <div class="form_colum2">
+                                                <div class="form_colum1">
                                                     <div id="btn_group"> 
-                                                        <span class="rooms_text">Rooms</span>
-                                                        <input type="button" value="-" id="test_btn1" onclick="room_decrease()">
-                                                        <input type="text" name="rooms" value="1" id="rooms_num">
-                                                        <input type="button" value="+" id="test_btn1" onclick="room_increase()">
+                                                        <div class="text_line">
+                                                            <span class="rooms_text">Rooms</span>
+                                                        </div>
+                                                        <div class="incdec">
+                                                            <input type="button" value="-" id="test_btn1" onclick="room_decrease()">
+                                                            <input type="text" name="rooms" value="1" id="rooms_num">
+                                                            <input type="button" value="+" id="test_btn1" onclick="room_increase()">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="form_colum">
-                                                <input type="text" id="datepicker_1" name="check_in_date" placeholder="Check in date">
-                                            </div>
-
-                                            <div class="form_colum">
-                                                <input type="text" id="datepicker_2" name="check_out_date" placeholder="Check in date">
-                                            </div>
-
                                             <div class="form_colum">
                                                 <div class="form_colum2">
-                                                    <div id="btn_group"> 
-                                                        <span class="guest_text">Guests</span>
-                                                        <input type="button" value="-" id="test_btn1" onclick="guest_decrease()">
-                                                        <input type="text" name="guests" value="1" id="guest_num">
-                                                        <input type="button" value="+" id="test_btn2" onclick="guest_increase()">
-                                                    </div>
+                                                    <input type="text" id="datepicker_1" name="check_in_date" placeholder="Check in date">
                                                 </div>
                                             </div>
-
+                                            <div class="form_colum">
+                                                <div class="form_colum2"> 
+                                                    <input type="text" id="datepicker_2" name="check_out_date" placeholder="Check in date">
+                                                </div>
+                                            </div>
                                             <div class="form_btn">
                                                 <input type="submit" class="btn_1" value="Search">
                                             </div>
-
-
+                                            
                                         </div>
                                     </form>
                                 </div>
