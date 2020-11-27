@@ -1,4 +1,11 @@
 <!doctype html>
+<?php
+    session_start();
+    if (!isset($_SESSION['customer_id'])) {
+        echo "<script> alert('Available after sign in.'); </script>";
+        echo "<script> location.href='guest_signin_page.php'; </script>";
+    }
+?>
 <html lang="en">
 
 <head>
@@ -44,7 +51,7 @@
                 <div class="row align-items-center ">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                            <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                            <a class="navbar-brand" href="main.php"> <img src="img/logo.png" alt="logo"> </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +62,7 @@
                                 id="navbarSupportedContent">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Home</a>
+                                        <a class="nav-link" href="main.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="about.html">About</a>
@@ -63,35 +70,24 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="packages.html">packages</a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            Blog
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="blog.html">Blog</a>
-                                            <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            pages
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                            <a class="dropdown-item" href="top_place.html">top place</a>
-                                            <a class="dropdown-item" href="tour_details.html">tour details</a>
-                                            <a class="dropdown-item" href="elements.html">Elements</a>
-                                        </div>
-                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="contact.html">Contact</a>
                                     </li>
+                                    <li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+											role="button" data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false">
+											My Page
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="reservation_content.php">Reservation Contents</a>
+											<a class="dropdown-item" href="#">Complain</a>
+										</div>
+									</li>
                                 </ul>
+
                             </div>
-                            <a href="select_option.html" class="btn_1 d-none d-lg-block">book now</a>
+                            <a href="select_option.php" class="btn_1 d-none d-lg-block">book now</a>
                         </nav>
                     </div>
                 </div>
@@ -139,43 +135,36 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
                                 <div class="booking_form">
-                                    <form action="hotel_room.html" method="POST" name="reservation" onsubmit="showRoom();return isValidDate()">
+                                    <form action="hotel_room.php" method="POST" name="reservation" onsubmit="return isValidDate(); showRoom(); ">
                                         <div class="form-row">
 
                                             <div class="form_colum">
-                                                <div class="form_colum2">
-                                                    <div id="btn_group">
-                                                        <span class="rooms_text">Rooms</span>
-                                                        <input type="button" value="-" id="test_btn1" onclick="room_decrease()">
-                                                        <input type="text" name="rooms" value="1" id="rooms_num">
-                                                        <input type="button" value="+" id="test_btn1" onclick="room_increase()">
+                                                <div class="form_colum1">
+                                                    <div id="btn_group"> 
+                                                        <div class="text_line">
+                                                            <span class="rooms_text">Rooms</span>
+                                                        </div>
+                                                        <div class="incdec">
+                                                            <input type="button" value="-" id="test_btn1" onclick="room_decrease()">
+                                                            <input type="text" name="rooms" value="1" id="rooms_num">
+                                                            <input type="button" value="+" id="test_btn1" onclick="room_increase()">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="form_colum">
-                                                <input type="text" id="datepicker_1" name="check_in_date" placeholder="Check in date">
-                                            </div>
-
-                                            <div class="form_colum">
-                                                <input type="text" id="datepicker_2" name="check_out_date" placeholder="Check in date">
-                                            </div>
-
                                             <div class="form_colum">
                                                 <div class="form_colum2">
-                                                    <div id="btn_group">
-                                                        <span class="guest_text">Guests</span>
-                                                        <input type="button" value="-" id="test_btn2" onclick="guest_decrease()">
-                                                        <input type="text" name="guests" value="1" id="guest_num">
-                                                        <input type="button" value="+" id="test_btn2" onclick="guest_increase()">
-                                                    </div>
+                                                    <input type="text" id="datepicker_1" name="check_in_date" placeholder="Check in date">
                                                 </div>
                                             </div>
-
+                                            <div class="form_colum">
+                                                <div class="form_colum2"> 
+                                                    <input type="text" id="datepicker_2" name="check_out_date" placeholder="Check in date">
+                                                </div>
+                                            </div>
                                             <div class="form_btn">
                                                 <input type="submit" class="btn_1" value="Search">
                                             </div>
-
 
                                         </div>
                                     </form>
@@ -322,7 +311,7 @@
         <script src="js/contact.js"></script>
         <!-- custom js -->
         <script src="js/custom.js"></script>
-        <script src = "js/hotel_change.js"></script>
+        <script src="js/hotel_change.js"></script>
         <script src="js/index_form.js" type="text/javascript"></script>
     </body>
 

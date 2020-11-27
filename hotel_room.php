@@ -91,7 +91,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="select_option.html" class="btn_1 d-none d-lg-block">book now</a>
+                            <a href="select_option.php" class="btn_1 d-none d-lg-block">book now</a>
                         </nav>
                     </div>
                 </div>

@@ -100,9 +100,9 @@
                 <div class="col-lg-10">
                     <div class="banner_text text-center">
                         <div class="banner_text_iner">
-                            <h1> Saintmartine</h1>
+                            <h1>Martine Hotel</h1>
                             <p>Let’s start your journey with us, your dream will come true</p>
-                            <a href="#" class="btn_1">Discover Now</a>
+                            <a href="select_option.php" class="btn_1">Book Now</a>
                         </div>
                     </div>
                 </div>
