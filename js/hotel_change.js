@@ -1,5 +1,10 @@
-/* 누를 때마다 버튼의 색을 바꿔주는 method. 
-눌려있으면 count를 1로 바꾸고, 그렇지 않으면 0으로 둔다.*/
+/* 뒤로 가기 버튼을 눌러도 checked와 hidden 상태가 유지되도록 했다.*/
+$(window).load(function() {
+    var selection = $('input[name="rooms[]"]:checkbox:checked');
+    console.log(selection);
+    select_room();
+});
+
 
 function showRoom(){
     var con = document.getElementsByClassName('hotel_room');
@@ -23,10 +28,20 @@ function setBtnColor(e) {
 function select_room(){
     var NOR = parseInt(document.getElementById("NOR").innerHTML); 
     // var NOR = 3;
+    var input_room = $('input[name="rooms[]"]');
     var selection = $('input[name="rooms[]"]:checkbox:checked');
-    if ($("input[id=room]:checkbox:checked").length >= NOR) {
-        var input_room = $('input[name="rooms[]"]');
+    console.log(selection);
+    var button = $('.hotel_room input:submit');
+    if (selection.length >= NOR) {
         input_room.attr('disabled',true);
+        selection.attr('disabled',false);
+        button.fadeIn("slow");
+    }
+    else{
+        /*활성화 된 버튼을 취소하면 다른 버튼을 누를 수 있게 만들어준다. */
+        input_room.attr('disabled',false);
+        // button.addClass('fadeOut');
+        button.fadeOut("slow");
     }
 }
 
