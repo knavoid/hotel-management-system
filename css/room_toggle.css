@@ -1,0 +1,37 @@
+.room_toggle {
+    padding: 0px 10px;
+    float:left;
+}
+
+.room_toggle label span{
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid;
+  border-color: #2493e0;
+  border-radius: 0;
+  font-size: 16px;
+  color: #2493e0;
+  text-transform: capitalize;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: white;
+  font-weight: 500;
+  cursor:pointer;
+}
+
+.room_toggle label input {
+    display: none;
+}
+
+.room_toggle label input:checked +span{
+    border: thin #ffffff solid;
+    color: white;   
+    background-color: #fe5c24;
+    cursor:pointer;
+}
+
+.room_toggle label input:disabled +span{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}

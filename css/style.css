@@ -32,6 +32,22 @@ input:hover, input:focus {
   background-color: #f7f7f7;
 }
 
+.body_padding{
+  padding: 50px 0px;
+}
+
+.light_padding{
+  padding: 10px 0px;
+}
+
+.light_height_padding{
+  padding: 0px 10px;
+}
+
+.height_padding{
+  padding: 130px 0px;
+}
+
 /* line 18, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_common.scss */
 .section_padding {
   padding: 130px 0px;
@@ -482,6 +498,7 @@ ul {
   display: inline-block;
   padding: 13px 30px;
   border-radius: 0;
+  border:transparent;
   font-size: 16px;
   color: #fff;
   text-transform: capitalize;
@@ -495,6 +512,7 @@ ul {
 .btn_1:hover, .btn_2:hover {
   color: #fff;
   background-color: #fe5c24;
+  border:transparent;
 }
 
 @media (max-width: 991px) {
@@ -590,6 +608,31 @@ ul {
 .btn_3 i {
   font-size: 12px;
   margin-left: 11px;
+}
+
+/* line 25, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_button.scss */
+.btn_5 {
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid;
+  border-color: #2493e0;
+  border-radius: 0;
+  font-size: 16px;
+  color: #2493e0;
+  text-transform: capitalize;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: white;
+  font-weight: 500;
+}
+
+/* line 35, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_button.scss */
+
+@media (max-width: 991px) {
+  /* line 25, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_button.scss */
+  .btn_5{
+    padding: 14px 30px;
+  }
 }
 
 /*=================== custom button rule start ====================*/
@@ -2532,14 +2575,14 @@ ul {
 /* line 106, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_banner.scss */
 .banner_part .banner_text .btn_1 {
   margin-top: 60px;
-  background-color: #2493e0;
-  padding: 23px 79px;
+    color: #fff;
+  background-color: #fe5c24;
+  padding: 18px 50px;
 }
 
 /* line 110, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_banner.scss */
 .banner_part .banner_text .btn_1:hover {
-  color: #fff;
-  background-color: #fe5c24;
+  background-color: #b83509;
 }
 
 /**************** hero part css end ****************/
