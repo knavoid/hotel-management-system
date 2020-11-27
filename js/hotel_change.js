@@ -1,7 +1,6 @@
 /* 뒤로 가기 버튼을 눌러도 checked와 hidden 상태가 유지되도록 했다.*/
 $(window).load(function() {
     var selection = $('input[name="rooms[]"]:checkbox:checked');
-    console.log(selection);
     select_room();
 });
 
@@ -11,7 +10,6 @@ function showRoom(){
     if (con.style.display == 'none'){
         con.style.display = 'block';
     }
-    console.log(con.style.display);
 }
 
 
@@ -26,11 +24,10 @@ function setBtnColor(e) {
 
 /*만약 room의 갯수가 초과하면, 더 이상 버튼을 누를 수 없게끔 만든다. */
 function select_room(){
-    var NOR = parseInt(document.getElementById("NOR").innerHTML); 
-    // var NOR = 3;
+    // var NOR = parseInt(document.getElementById("NOR").innerHTML); 
+    var NOR = 3;
     var input_room = $('input[name="rooms[]"]');
     var selection = $('input[name="rooms[]"]:checkbox:checked');
-    console.log(selection);
     var button = $('.hotel_room input:submit');
     if (selection.length >= NOR) {
         input_room.attr('disabled',true);
@@ -50,7 +47,6 @@ function show(){
     var new_selection = new Array();
     console.log(selection);
     for (var i in selection) {
-        console.log(selection[i])
         // var count = selection[i].dataset.count;
         // if (count === 1) {
         //     new_selection.push(selection[i]);
