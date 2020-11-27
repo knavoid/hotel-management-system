@@ -494,6 +494,7 @@ ul {
   display: inline-block;
   padding: 13px 30px;
   border-radius: 0;
+  border:transparent;
   font-size: 16px;
   color: #fff;
   text-transform: capitalize;
@@ -507,6 +508,7 @@ ul {
 .btn_1:hover, .btn_2:hover {
   color: #fff;
   background-color: #fe5c24;
+  border:transparent;
 }
 
 @media (max-width: 991px) {
@@ -619,6 +621,7 @@ ul {
   background-color: white;
   font-weight: 500;
 }
+
 
 /* line 35, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_button.scss */
 
@@ -2569,14 +2572,15 @@ ul {
 /* line 106, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_banner.scss */
 .banner_part .banner_text .btn_1 {
   margin-top: 60px;
-  background-color: #2493e0;
-  padding: 23px 79px;
+    color: #fff;
+  background-color: #fe5c24;
+  padding: 18px 50px;
 }
 
 /* line 110, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_banner.scss */
 .banner_part .banner_text .btn_1:hover {
-  color: #fff;
-  background-color: #fe5c24;
+  
+  background-color: #b83509;
 }
 
 /**************** hero part css end ****************/
