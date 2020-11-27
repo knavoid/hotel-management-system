@@ -124,12 +124,10 @@
                     $date = date("Y-m-d", strtotime($date . "+1 days"));
                 }
                 array_push($dates, $cod);
-
-                $_SESSION['guests'] = $_POST['guests'];
                 $_SESSION['dates'] = serialize($dates);
             ?>
             
-
+            
 
             <!-- 예약 기본 정보 -->
             <h2 >Rooms: <?=$_POST['rooms']?> </h2>

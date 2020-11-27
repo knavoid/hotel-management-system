@@ -85,8 +85,8 @@
 										</div>
 									</li>
                                 </ul>
-
                             </div>
+                            
                             <a href="select_option.php" class="btn_1 d-none d-lg-block">Book Now</a>
                         </nav>
                     </div>
@@ -135,7 +135,7 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
                                 <div class="booking_form">
-                                    <form action="hotel_room.php" method="POST" name="reservation" onsubmit="return isValidDate(); showRoom(); ">
+                                    <form action="hotel_room.php" method="POST" name="reservation" onsubmit="showRoom(); return isValidDate();">
                                         <div class="form-row">
 
                                             <div class="form_colum">
