@@ -3,7 +3,7 @@
     session_start();
     if (!isset($_SESSION["customer_name"])) {
         echo "<script> alert('Unauthorized access.'); </script>";
-        echo "<script> location.href='index.html'; </script>";
+        echo "<script> location.href='index.php'; </script>";
     }
 ?>
 <html lang="en">
@@ -47,7 +47,7 @@
                 <div class="row align-items-center ">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                            <a class="navbar-brand" href="main.php"> <img src="img/logo.png" alt="logo"> </a>
+                            <a class="navbar-brand" href="index.php"> <img src="img/logo.png" alt="logo"> </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@
                                 id="navbarSupportedContent">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="main.php">Home</a>
+                                        <a class="nav-link" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="about.html">About</a>

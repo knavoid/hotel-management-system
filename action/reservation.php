@@ -36,5 +36,5 @@
     }
     
     echo "<script> alert('Your reservation has been received!'); </script>";
-    echo "<script> location.href='../main.php'; </script>";
+    echo "<script> location.href='../index.php'; </script>";
 ?>

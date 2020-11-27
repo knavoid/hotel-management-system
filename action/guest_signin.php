@@ -15,7 +15,7 @@
         	if ($result[$i]["id"] === $id && $result[$i]["password"] === $password) {
                 $_SESSION['customer_id'] = $result[$i]["id"];
                 $_SESSION['customer_name'] = $result[$i]["cname"];
-                header("Location: ../main.php");
+                echo "<script> location.href='../index.php'; </script>";
                 exit;
         	}
         }

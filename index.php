@@ -1,4 +1,5 @@
 <!doctype html>
+<?php session_start() ?>
 <html lang="en">
 
 <head>
@@ -39,7 +40,7 @@
                 <div class="row align-items-center ">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                            <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                            <a class="navbar-brand" href="index.php"> <img src="img/logo.png" alt="logo"> </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +51,7 @@
                                 id="navbarSupportedContent">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Home</a>
+                                        <a class="nav-link" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="about.html">About</a>
@@ -74,7 +75,14 @@
 									</li>
                                 </ul>
                             </div>
-                            <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                            <div>
+                                <?php if (isset($_SESSION['customer_name'])) { ?>
+                                    <p><?= $_SESSION['customer_name'] ?>님</p>
+                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
+                                <?php } else {?>
+                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                                <?php } ?>
+                            </div>
                         </nav>
                     </div>
                 </div>
