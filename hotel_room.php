@@ -368,6 +368,7 @@
                         
                         <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
                         <div class="col-xs-3">
+
                             <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='801'/><span>801</span></label>
                             <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='802'/><span>802</span></label>
                         </div>
@@ -381,6 +382,7 @@
                         
                         <div class ="about_text col-xs-6"><h4>Room View</h4></div>
                         <div class="col-xs-3">
+
                             <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='803'/><span>803</span></label>
                             <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='804'/><span>804</span></label>
                         </div>

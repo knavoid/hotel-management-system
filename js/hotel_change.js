@@ -19,13 +19,14 @@ function setBtnColor(e) {
      target.dataset.count = count === 1 ? 0 : 1;
   }
 
-/*count가 1인것만 form을 이용해서 넘겨주도록 만들려고 한다. */
-
+/*만약 room의 갯수가 초과하면, 더 이상 버튼을 누를 수 없게끔 만든다. */
 function select_room(){
     var NOR = parseInt(document.getElementById("NOR").innerHTML); 
+    // var NOR = 3;
     var selection = $('input[name="rooms[]"]:checkbox:checked');
-    if ($("input[id=room]:checkbox:checked").length > NOR) {
-        alert("Please select " + NOR + " rooms!");
+    if ($("input[id=room]:checkbox:checked").length >= NOR) {
+        var input_room = $('input[name="rooms[]"]');
+        input_room.attr('disabled',true);
     }
 }
 
