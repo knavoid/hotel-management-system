@@ -261,40 +261,40 @@
                     <div class="room_toggle">
                         <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='503'/><span>503</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='504'/><span>504</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='503'/><span>503</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='504'/><span>504</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='403'/><span>403</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='404'/><span>404</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='403'/><span>403</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='404'/><span>404</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='303'/><span>303</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='304'/><span>304</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='303'/><span>303</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='304'/><span>304</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='203'/><span>203</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='204'/><span>204</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='203'/><span>203</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='204'/><span>204</span></label>
                         </div>
                     </div>
 
                     <div class="room_toggle">
                         <div class ="about_text col-xs-6"><h4>Room View</h4></div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='507'/><span>507</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='508'/><span>508</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='507'/><span>507</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='508'/><span>508</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='407'/><span>407</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='408'/><span>408</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='407'/><span>407</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='408'/><span>408</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='307'/><span>307</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='308'/><span>308</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='307'/><span>307</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='308'/><span>308</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='207'/><span>207</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='208'/><span>208</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='207'/><span>207</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='208'/><span>208</span></label>
                         </div>
                     </div>
                     <!-- <div class= "col-md-1 light_height_padding">
@@ -315,20 +315,20 @@
                     <div class="room_toggle">
                         <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='501'/><span>501</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='502'/><span>502</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='501'/><span>501</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='502'/><span>502</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='401'/><span>401</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='402'/><span>402</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='401'/><span>401</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='402'/><span>402</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='301'/><span>301</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='302'/><span>302</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='301'/><span>301</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='302'/><span>302</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='201'/><span>201</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='202'/><span>202</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='201'/><span>201</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='202'/><span>202</span></label>
                         </div>
                     </div>
 
@@ -336,20 +336,20 @@
                         
                         <div class ="about_text col-xs-6"><h4>Room View</h4></div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='505'/><span>505</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='506'/><span>506</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='505'/><span>505</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='506'/><span>506</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='405'/><span>405</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='406'/><span>406</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='405'/><span>405</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='406'/><span>406</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='305'/><span>305</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='306'/><span>306</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='305'/><span>305</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='306'/><span>306</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='205'/><span>205</span></label>
-                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' class = "btn_5" value='206'/><span>206</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='205'/><span>205</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='206'/><span>206</span></label>
                         </div>
                     </div>
             </div>
@@ -368,12 +368,12 @@
                         
                         <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='801'/><span>801</span></label>
-                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='802'/><span>802</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='801'/><span>801</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='802'/><span>802</span></label>
                         </div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='701'/><span>701</span></label>
-                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='702'/><span>702</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='701'/><span>701</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='702'/><span>702</span></label>
                         </div>
                     </div>
 
@@ -381,13 +381,13 @@
                         
                         <div class ="about_text col-xs-6"><h4>Room View</h4></div>
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='803'/><span>803</span></label>
-                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='804'/><span>804</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='803'/><span>803</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='804'/><span>804</span></label>
                         </div>
                         
                         <div class="col-xs-3">
-                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='703'/><span>703</span></label>
-                            <label><input type = "checkbox" id = 'room' name = 'rooms[]' class = "btn_5" value='704'/><span>704</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='703'/><span>703</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='704'/><span>704</span></label>
                         </div>
                     </div>
             </div>
