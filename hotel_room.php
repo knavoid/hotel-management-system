@@ -27,7 +27,12 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/additional.css">
+
+    <link rel="stylesheet" href="css/room_toggle.css">
+
+    <link rel="stylesheet" href="css/hotel_room.css">
 
 </head>
 
@@ -86,7 +91,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="#" class="btn_1 d-none d-lg-block">book now</a>
+                            <a href="select_option.html" class="btn_1 d-none d-lg-block">book now</a>
                         </nav>
                     </div>
                 </div>
@@ -134,12 +139,12 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
                                 <div class="booking_form">
-                                    <form action="select_rooms.php" method="POST" name="reservation" onsubmit="return isValidDate()">
+                                    <form action="hotel_room.html" method="POST" name="reservation" onsubmit="showRoom();return isValidDate()">
                                         <div class="form-row">
-                                            
+
                                             <div class="form_colum">
                                                 <div class="form_colum2">
-                                                    <div id="btn_group"> 
+                                                    <div id="btn_group">
                                                         <span class="rooms_text">Rooms</span>
                                                         <input type="button" value="-" id="test_btn1" onclick="room_decrease()">
                                                         <input type="text" name="rooms" value="1" id="rooms_num">
@@ -158,7 +163,7 @@
 
                                             <div class="form_colum">
                                                 <div class="form_colum2">
-                                                    <div id="btn_group"> 
+                                                    <div id="btn_group">
                                                         <span class="guest_text">Guests</span>
                                                         <input type="button" value="-" id="test_btn2" onclick="guest_decrease()">
                                                         <input type="text" name="guests" value="1" id="guest_num">
@@ -219,69 +224,175 @@
     <!-- Header part end-->
 
     <!-- body part -->
-    <section class="about_us">
+    <section class="hotel_room">
         <div class="container">
+            <form action="reservation.php" method="post" onsubmit="return checkNumberOfRooms()">
+            <?php
+                // 체크인 날짜부터 체크아웃 날짜까지의 날짜들을 배열안에 저장
+                $dates = array();
+
+                $cid = explode("/", $_POST['check_in_date']);
+                $cod = explode("/", $_POST['check_out_date']);
+
+                $cid = (string)$cid[2] . "-" . (string)$cid[0] . "-" . (string)$cid[1];
+                $cod = (string)$cod[2] . "-" . (string)$cod[0] . "-" . (string)$cod[1];
+
+                $date = $cid;
+                while ($date !== $cod) {
+                    array_push($dates, $date);
+                    $date = date("Y-m-d", strtotime($date . "+1 days"));
+                }
+                array_push($dates, $cod);
+
+                $_SESSION['guests'] = $_POST['guests'];
+                $_SESSION['dates'] = serialize($dates);
+            ?>
+
             <div class="row align-items-end body_padding">
-                <div class ="about_text col-lg-12"><h2>Standard</h2></div>
+                <div class ="about_text col-lg-10"><h2>Standard</h2></div>
+                <div class ="col-lg-1"> <input type="submit" class = "btn_1" value="다음 단계로"></div>
                 <div class="col-lg-6">
                     <div class="about_img">
                         <img src="img/hotels/standard.jpg" alt="#">
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
-                    <div class="col-xs-1">
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '101' name = 'rooms[]' class = "btn_5" value='101'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '102' name = 'rooms[]' class = "btn_5" value='102'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '103' name = 'rooms[]' class = "btn_5" value='103'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '104' name = 'rooms[]' class = "btn_5" value='104'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '105' name = 'rooms[]' class = "btn_5" value='105'/>
-                    </div>
-                    <div class="col-xs-1 light_padding">
-                        
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '106' name = 'rooms[]' class = "btn_5" value='106'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '107' name = 'rooms[]' class = "btn_5" value='107'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '108' name = 'rooms[]' class = "btn_5" value='108'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '109' name = 'rooms[]' class = "btn_5" value='109'/>
-                        <input type = "button" onclick='setBtnColor(event)' data-count = "0" id = '110' name = 'rooms[]' class = "btn_5" value='110'/>
-                    </div>
-                    <div class= "col-xs-1 light_padding">
-                        <input type="submit" onclick = 'show()' value="Book Now"> 
-                    </div>
-                </div>
 
-            </div>
-            <!--
-            <a href="#" class="btn_1">106</a>
-            <a href="#" class="btn_1">107</a>
-            <a href="#" class="btn_1">108</a>
-            <a href="#" class="btn_1">109</a>
-            <a href="#" class="btn_1">110</a>
-        -->
-            <div class="row align-items-center body_padding">
-                <div class ="about_text col-lg-12"><h2>Family</h2></div>
+                    <div class="room_toggle">
+                        <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='503'/><span>503</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='504'/><span>504</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='403'/><span>403</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='404'/><span>404</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='303'/><span>303</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='304'/><span>304</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='203'/><span>203</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='204'/><span>204</span></label>
+                        </div>
+                    </div>
+
+                    <div class="room_toggle">
+                        <div class ="about_text col-xs-6"><h4>Room View</h4></div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='507'/><span>507</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='508'/><span>508</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='407'/><span>407</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='408'/><span>408</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='307'/><span>307</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='308'/><span>308</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='207'/><span>207</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='208'/><span>208</span></label>
+                        </div>
+                    </div>
+                    <!-- <div class= "col-md-1 light_height_padding">
+                    <label for=""></label>
+                    </div> -->
+                </div>
+        </div>
+
+        <div class="row align-items-end body_padding">
+                <div class ="about_text col-lg-10"><h2>Family</h2></div>
+                <div class ="col-lg-1"> <input type="submit" class = "btn_1" value="다음 단계로"></div>
                 <div class="col-lg-6">
                     <div class="about_img">
-                        <img src="img/hotels/family.jpg" alt="#">
+                        <img src="img/hotels/Family.jpg" alt="#">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <a href="#" class="btn_1">Discover Now</a>
-                </div>
+                    <div class="room_toggle">
+                        <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='501'/><span>501</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='502'/><span>502</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='401'/><span>401</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='402'/><span>402</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='301'/><span>301</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='302'/><span>302</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='201'/><span>201</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='202'/><span>202</span></label>
+                        </div>
+                    </div>
+
+                    <div class="room_toggle">
+
+                        <div class ="about_text col-xs-6"><h4>Room View</h4></div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='505'/><span>505</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='506'/><span>506</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='405'/><span>405</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='406'/><span>406</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='305'/><span>305</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='306'/><span>306</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='205'/><span>205</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='206'/><span>206</span></label>
+                        </div>
+                    </div>
             </div>
-            <div class="row align-items-center body_padding">
-                <div class ="about_text col-lg-12"><h2>Deluxe</h2></div>
+        </div>
+
+            <div class="row align-items-end body_padding">
+                <div class ="about_text col-lg-10"><h2>Deluxe</h2></div>
+                <div class ="col-lg-1"> <input type="submit" class = "btn_1" value="다음 단계로"></div>
                 <div class="col-lg-6">
                     <div class="about_img">
                         <img src="img/hotels/delux.jpg" alt="#">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about_text">
-                    <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged night yielding land creeping that seed appear were bearing.</p>
+                    <div class="room_toggle">
+
+                        <div class ="about_text col-xs-6"><h4>Ocean View</h4></div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='801'/><span>801</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='802'/><span>802</span></label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='701'/><span>701</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='702'/><span>702</span></label>
+                        </div>
                     </div>
-                </div>
-            </div>      
+
+                    <div class="room_toggle">
+
+                        <div class ="about_text col-xs-6"><h4>Room View</h4></div>
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='803'/><span>803</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='804'/><span>804</span></label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='703'/><span>703</span></label>
+                            <label><input type = "checkbox" onclick = select_room() id = 'room' name = 'rooms[]' value='704'/><span>704</span></label>
+                        </div>
+                    </div>
+            </div>
+            <input type="submit" class = "btn_1 topic" value="다음 단계로"></div>
+        </form>
         </div>
     </section>
     <!-- Header part end-->
