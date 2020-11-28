@@ -4,11 +4,14 @@
 
     $customer = $_SESSION['customer_id'];
     $dates = unserialize($_SESSION['dates']);
-    $guests = $_SESSION['guests'];
     $rooms = $_POST['rooms'];
     $cid = $_POST['cid'];
     $cod = $_POST['cod'];
-    
+
+    $guests = array();
+    for ($i = 1; $i <= count($rooms); $i++) {
+        array_push($guests, $_POST['guests' . $i]);
+    }
     
     try {
         $db = connectDB();
@@ -19,7 +22,7 @@
 
         for ($i = 0; $i < count($rooms); $i++) { 
             
-            $db->exec("INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ($customer, $rooms[$i], $guests, $cid, $cod)");
+            $db->exec("INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ($customer, $rooms[$i], $guests[$i], $cid, $cod)");
             
             $rows = $db->query("SELECT * FROM reservation");
             $result = $rows->fetchAll();
@@ -32,7 +35,8 @@
         }
 
     } catch (PDOException $e) {
-        echo $e->getMessage();
+        echo "<script> alert('An error has occurred. Please select a room again.'); </script>";
+        echo "<script> location.href='../hotel_room.php'; </script>";
     }
     
     echo "<script> alert('Your reservation has been received!'); </script>";
