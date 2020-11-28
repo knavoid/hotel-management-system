@@ -1,5 +1,12 @@
 <!doctype html>
-<?php session_start() ?>
+<?php 
+    session_start();
+    if (!isset($_SESSION["customer_name"])) {
+        echo "<script> alert('Unauthorized access.'); </script>";
+        echo "<script> location.href='index.html'; </script>";
+    }
+    include 'action/init.php';
+?>
 <html lang="en">
 
 <head>
@@ -35,6 +42,8 @@
 
     <link rel="stylesheet" href="css/hotel_room.css">
 
+    <script src="js/room_select.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -396,6 +405,34 @@
                 <input type="submit" class = "btn_1 topic" value="다음 단계로">
                 
             </form>
+
+            <?php
+                // reservation_log 테이블 데이터를 이용하여 이미 예약된 객실 파악
+                try {
+                    $db = connectDB();
+                    
+                    for ($room = 201; $room <= 808; $room++) { 
+                        $available = TRUE;
+                        for ($i = 0; $i < count($dates); $i++) {
+                            $date = $db->quote($dates[$i]);
+
+                            $rows = $db->query("SELECT * FROM reservation_log WHERE rnumber = $room AND use_date = $date");
+                            $result = $rows->fetchAll();
+
+                            if (count($result) != 0) $available = FALSE;
+                            if ($available === FALSE) break;
+                        }
+                        if ($available === FALSE) {
+                            echo "<script> unavailable($room); </script>";
+                        }
+
+                        if ($room % 100 == 8) $room += 92;
+                    }
+                } catch (PDOException $e) {
+                    echo $e->getMessage();
+                }
+            ?>
+
         </div>
     </section>
     <!-- Header part end-->

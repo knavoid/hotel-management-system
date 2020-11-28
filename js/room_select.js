@@ -3,14 +3,22 @@
 var NOR = parseInt(document.getElementById("NOR").value);   // number of rooms
 
 jQuery(document).ready(function($) {
+    
+    var booked = new Array();
+    $("input[id=room]:disabled:disabled").each(function() {
+        booked.push($(this).val());
+    });
+
     $("input[id=room]:checkbox").change(function() {
         if($("input[id=room]:checkbox:checked").length == NOR) {
             $(":checkbox:not(:checked)").attr("disabled", "disabled");
         } else {
-            $("input[id=room]:checkbox").removeAttr("disabled");
+            $("input[id=room]:checkbox").each(function() {
+                if (!booked.includes($(this).val())) $(this).removeAttr("disabled");
+            });
         }
     });
-
+    
     $(".select").click(function() { 
         var str = "Selected Rooms: "; 
         $(".select").each(function() {
@@ -22,12 +30,21 @@ jQuery(document).ready(function($) {
 
 function check() {
     if ($("input[id=room]:checkbox:checked").length != NOR) {
-        alert("Please select " + NOR + " rooms!");
+        if (NOR == 1) alert("Please select " + NOR + " room!");
+        else alert("Please select " + NOR + " rooms!");
         return false;
     }
     return true;
 }
 
+// 선택한 기간 사이에 해당 객실에 하나라도 예약이 있으면 선택 불가능
+function unavailable(sr) {
+    $("input[id=room]").each(function() {
+        if ($(this).val() == sr) $(this).attr("disabled", "disabled");
+    });
+}
+
+// 각 선택한 객실의 인원 설정 기능
 function guest_decrease1() {
     var guest = document.getElementById("guest_num1");
     var num = guest.value;
