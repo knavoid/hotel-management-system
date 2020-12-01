@@ -170,40 +170,6 @@
                                     </form>
                                 </div>
                             </div>
-                            <!-- 연회장 예약 구현시 사용 -->
-                            <!-- <div class="tab-pane fade" id="tricket" role="tabpanel" aria-labelledby="tricket-tab">
-                                <div class="booking_form">
-                                    <form action="#">
-                                        <div class="form-row">
-                                            <div class="form_colum">
-                                                <select class="nc_select">
-                                                    <option selected>Choosace place </option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
-                                            </div>
-                                            <div class="form_colum">
-                                                <input id="datepicker_3" placeholder="Check in date">
-                                            </div>
-                                            <div class="form_colum">
-                                                <input id="datepicker_4" placeholder="Check in date">
-                                            </div>
-                                            <div class="form_colum">
-                                                <select class="nc_select">
-                                                    <option selected>Persone </option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
-                                            </div>
-                                            <div class="form_btn">
-                                                <a href="#" class="btn_1">search</a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
