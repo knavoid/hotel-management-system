@@ -125,10 +125,6 @@
                             <li class="nav-item">
                             <a class="nav-link active" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="true">hotel</a>
                             </li>
-                            <!-- 추후에 연회장 서비스 예약시 사용 -->
-                            <!-- <li class="nav-item">
-                            <a class="nav-link" id="tricket-tab" data-toggle="tab" href="#tricket" role="tab" aria-controls="tricket" aria-selected="false">tricket</a>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -137,7 +133,7 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
                                 <div class="booking_form">
-                                    <form action="hotel_room.html" method="POST" name="reservation" onsubmit="showRoom(); return isValidDate()">
+                                    <form action="hotel_room.php" method="POST" name="reservation" onsubmit="showRoom(); return isValidDate()">
                                         <div class="form-row">
 
                                             <div class="form_colum">
@@ -148,7 +144,7 @@
                                                         </div>
                                                         <div class="incdec">
                                                             <input type="button" value="-" id="test_btn1" onclick="room_decrease()">
-                                                            <input type="text" name="rooms" value="1" id="rooms_num">
+                                                            <input type="text" name="rooms" value="<?= $_POST['rooms'] ?>" id="rooms_num">
                                                             <input type="button" value="+" id="test_btn1" onclick="room_increase()">
                                                         </div>
                                                     </div>
@@ -156,12 +152,12 @@
                                             </div>
                                             <div class="form_colum">
                                                 <div class="form_colum2">
-                                                    <input type="text" id="datepicker_1" name="check_in_date" placeholder="Check in date">
+                                                    <input type="text" id="datepicker_1" name="check_in_date" placeholder="Check in date" value="<?= $_POST['check_in_date'] ?>">
                                                 </div>
                                             </div>
                                             <div class="form_colum">
                                                 <div class="form_colum2"> 
-                                                    <input type="text" id="datepicker_2" name="check_out_date" placeholder="Check in date">
+                                                    <input type="text" id="datepicker_2" name="check_out_date" placeholder="Check in date" value="<?= $_POST['check_out_date'] ?>">
                                                 </div>
                                             </div>
                                             <div class="form_btn">
@@ -172,40 +168,6 @@
                                     </form>
                                 </div>
                             </div>
-                            <!-- 연회장 예약 구현시 사용 -->
-                            <!-- <div class="tab-pane fade" id="tricket" role="tabpanel" aria-labelledby="tricket-tab">
-                                <div class="booking_form">
-                                    <form action="#">
-                                        <div class="form-row">
-                                            <div class="form_colum">
-                                                <select class="nc_select">
-                                                    <option selected>Choosace place </option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
-                                            </div>
-                                            <div class="form_colum">
-                                                <input id="datepicker_3" placeholder="Check in date">
-                                            </div>
-                                            <div class="form_colum">
-                                                <input id="datepicker_4" placeholder="Check in date">
-                                            </div>
-                                            <div class="form_colum">
-                                                <select class="nc_select">
-                                                    <option selected>Persone </option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
-                                            </div>
-                                            <div class="form_btn">
-                                                <a href="#" class="btn_1">search</a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>

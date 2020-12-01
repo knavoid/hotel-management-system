@@ -123,10 +123,6 @@
                             <li class="nav-item">
                             <a class="nav-link active" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="true">hotel</a>
                             </li>
-                            <!-- 추후에 연회장 서비스 예약시 사용 -->
-                            <!-- <li class="nav-item">
-                            <a class="nav-link" id="tricket-tab" data-toggle="tab" href="#tricket" role="tab" aria-controls="tricket" aria-selected="false">tricket</a>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -278,7 +274,8 @@
         <!-- custom js -->
         <script src="js/custom.js"></script>
         <script src="js/hotel_change.js"></script>
-        <script src="js/index_form.js" type="text/javascript"></script>
+        <script src="js/index_form.js"></script>
+        <script src="js/select_option.js"></script>
     </body>
 
     </html>
