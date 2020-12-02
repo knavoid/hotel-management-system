@@ -133,7 +133,7 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
                                 <div class="booking_form">
-                                    <form action="hotel_room.php" method="POST" name="reservation" onsubmit="showRoom(); return isValidDate()">
+                                    <form action="hotel_room.php" method="POST" name="reservation" onsubmit="return isValidDate()">
                                         <div class="form-row">
 
                                             <div class="form_colum">
@@ -202,7 +202,7 @@
             <input type="hidden" id="NOR" value="<?=$_POST['rooms']?>">
             <input type="hidden" id="NOG" value="<?=$_POST['guests']?>">
 
-            <form action="action/reservation.php" method="post" onsubmit="return check()">
+            <form action="payment.php" method="post" onsubmit="return check()">
                 <input type="hidden" name="cid" value="<?= $dates[0] ?>">
                 <input type="hidden" name="cod" value="<?= $dates[count($dates) - 1] ?>">
 
@@ -500,8 +500,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- custom js -->
     <script src="js/custom.js"></script>
     <script src="js/hotel_change.js"></script>
-    <script src="js/index_form.js" type="text/javascript"></script>
-    <script src="js/room_select.js" type="text/javascript"></script>
+    <script src="js/index_form.js"></script>
+    <script src="js/room_select.js"></script>
 </body>
 
 </html>

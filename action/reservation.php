@@ -4,7 +4,7 @@
 
     $customer = $_SESSION['customer_id'];
     $dates = unserialize($_SESSION['dates']);
-    $rooms = $_POST['rooms'];
+    $rooms = unserialize($_SESSION['rooms']);
     $cid = $_POST['cid'];
     $cod = $_POST['cod'];
 
@@ -35,8 +35,9 @@
         }
 
     } catch (PDOException $e) {
+        echo $e->getMessage();
         echo "<script> alert('An error has occurred. Please select a room again.'); </script>";
-        echo "<script> location.href='../hotel_room.php'; </script>";
+        echo "<script> location.href='../payment.php'; </script>";
     }
     
     echo "<script> alert('Your reservation has been received!'); </script>";

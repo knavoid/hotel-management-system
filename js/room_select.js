@@ -55,7 +55,7 @@ function guest_decrease1() {
 function guest_increase1() {
     var guest = document.getElementById("guest_num1");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -69,7 +69,7 @@ function guest_decrease2() {
 function guest_increase2() {
     var guest = document.getElementById("guest_num2");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -83,7 +83,7 @@ function guest_decrease3() {
 function guest_increase3() {
     var guest = document.getElementById("guest_num3");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -97,7 +97,7 @@ function guest_decrease4() {
 function guest_increase4() {
     var guest = document.getElementById("guest_num4");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -111,7 +111,7 @@ function guest_decrease5() {
 function guest_increase5() {
     var guest = document.getElementById("guest_num5");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -125,7 +125,7 @@ function guest_decrease6() {
 function guest_increase6() {
     var guest = document.getElementById("guest_num6");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -139,7 +139,7 @@ function guest_decrease7() {
 function guest_increase7() {
     var guest = document.getElementById("guest_num7");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -153,7 +153,7 @@ function guest_decrease8() {
 function guest_increase8() {
     var guest = document.getElementById("guest_num8");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -167,7 +167,7 @@ function guest_decrease9() {
 function guest_increase9() {
     var guest = document.getElementById("guest_num9");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
 
@@ -181,6 +181,6 @@ function guest_decrease10() {
 function guest_increase10() {
     var guest = document.getElementById("guest_num10");
     var num = guest.value;
-    if (num < 40) num++;
+    if (num < 10) num++;
     guest.value = num;
 }
