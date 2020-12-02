@@ -11,10 +11,13 @@ jQuery(document).ready(function($) {
     $('.price2').html(price2);
     $('.price3').html(price3);
 
-    $('.price2').change(function() {
-        var cprice2 = $('.price2').html();
+    $('.price2').bind("DOMSubtreeModified",function() {
+        var price1 = $('.price1').html().replace(/,/g, '');;
+        var price2 = $('.price2').html().replace(/,/g, '');;
         price3 = parseInt(price1) + parseInt(price2);
+        price2 = price2.toString().replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
         price3 = price3.toString().replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        $('.price2').html(price2);
         $('.price3').html(price3);
     });
 });

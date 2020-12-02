@@ -141,6 +141,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     
+                    <?php for ($i = 0; $i < count($plimit); $i++) { ?>
+                        <input type="hidden" id="plimit<?=$i+1?>" value="<?= $plimit[$i] ?>">
+                    <?php } ?>
 
                     <form action="action/reservation.php" method="post">
 
