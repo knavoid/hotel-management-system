@@ -46,241 +46,281 @@ function unavailable(sr) {
 
 // 각 선택한 객실의 인원 설정 기능
 function guest_decrease1() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num1");
     var plimit = parseInt(document.getElementById("plimit1").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase1() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num1");
     var plimit = parseInt(document.getElementById("plimit1").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease2() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num2");
     var plimit = parseInt(document.getElementById("plimit2").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase2() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num2");
     var plimit = parseInt(document.getElementById("plimit2").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease3() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num3");
     var plimit = parseInt(document.getElementById("plimit3").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase3() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num3");
     var plimit = parseInt(document.getElementById("plimit3").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease4() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num4");
     var plimit = parseInt(document.getElementById("plimit4").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase4() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num4");
     var plimit = parseInt(document.getElementById("plimit4").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease5() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num5");
     var plimit = parseInt(document.getElementById("plimit5").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase5() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num5");
     var plimit = parseInt(document.getElementById("plimit5").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease6() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num6");
     var plimit = parseInt(document.getElementById("plimit6").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase6() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num6");
     var plimit = parseInt(document.getElementById("plimit6").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease7() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num7");
     var plimit = parseInt(document.getElementById("plimit7").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase7() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num7");
     var plimit = parseInt(document.getElementById("plimit7").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease8() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num8");
     var plimit = parseInt(document.getElementById("plimit8").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase8() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num8");
     var plimit = parseInt(document.getElementById("plimit8").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease9() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num9");
     var plimit = parseInt(document.getElementById("plimit9").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase9() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num9");
     var plimit = parseInt(document.getElementById("plimit9").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }
 
 function guest_decrease10() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num10");
     var plimit = parseInt(document.getElementById("plimit10").value);
     var num = guest.value;
-    if (num > 1) num--;
     if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
-    } else {
-        $('.price2').html(0);
+        var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+        $('.price2').html(price2 - 22000 * nights);
     }
+    if (num > 1) num--;
     guest.value = num;
 }
 
 function guest_increase10() {
+    var nights = parseInt(document.getElementById("nights").value);
     var guest = document.getElementById("guest_num10");
     var plimit = parseInt(document.getElementById("plimit10").value);
     var num = guest.value;
-    if (num < 10) num++;
-    if (num > plimit) {
-        $('.price2').html((num - plimit) * 20000);
+    if (num < 10) {
+        num++;
+        if (num > plimit) {
+            var price2 = parseInt($('.price2').html().replace(/,/g, ''));
+            $('.price2').html(price2 + 22000 * nights);
+        }
     }
     guest.value = num;
 }

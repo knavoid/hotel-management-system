@@ -348,19 +348,6 @@
                         </div>
                     </div>
                 </div>
-                    
-                <span id="selected" class="rooms_text" style="font-size:25px;">Selected Rooms: </span>
-
-                <?php
-                for ($i = 1; $i <= $_POST['rooms']; $i++) { ?>
-                    <div id="btn_group">    
-                        <span class="room_text">Room<?= $i ?></span>
-                        <input type="button" value="-" id="test_btn1" onclick="guest_decrease<?= $i ?>()">
-                        <input type="text" name="guests<?= $i ?>" value="1" id="guest_num<?= $i ?>">
-                        <input type="button" value="+" id="test_btn2" onclick="guest_increase<?= $i ?>()">
-                    </div>
-                    <?php }
-                ?>
                 
                 <!-- 아래 input버튼이 계속 생성되지 않아 임시로 제작하였습니다. -->
                 <button style="width:100px;height:100px;">Book</button>

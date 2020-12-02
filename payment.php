@@ -141,9 +141,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     
-                    <?php for ($i = 0; $i < count($plimit); $i++) { ?>
-                        <input type="hidden" id="plimit<?=$i+1?>" value="<?= $plimit[$i] ?>">
+                    <?php 
+                        $dates = unserialize($_SESSION['dates']);
+                        $nights = count($dates) - 1;
+                    
+                        for ($i = 0; $i < count($plimit); $i++) { ?>
+                            <input type="hidden" id="plimit<?=$i+1?>" value="<?= $plimit[$i] ?>">
                     <?php } ?>
+                    <input type="hidden" id="nights" value="<?= $nights ?>">
 
                     <form action="action/reservation.php" method="post">
 
@@ -161,7 +166,7 @@
                         <?php } ?>
                     
                         <div>
-                            <h3>Order Rooms Total<b class="price1" style="margin-left:133px;"><?=$price?></b></h3>
+                            <h3>Order Rooms Total<b class="price1" style="margin-left:133px;"><?=$price * $nights?></b></h3>
                             <h3>Additional Payment<b class="price2" style="margin-left:126px;">0</b></h3>
                             <h3>Amount Paid<b class="price3" style="margin-left:200px;"></b></h3>
                         </div>

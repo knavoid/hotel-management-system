@@ -107,9 +107,9 @@ CREATE TABLE reservation_log (
 
 INSERT INTO staff VALUES ('admin', 'admin', '관리자', '01036464406', 'master', 0, 1);
 
-INSERT INTO room_type VALUES ('STANDARD', 100000, 2, 1, 'CITY', 0);
-INSERT INTO room_type VALUES ('DELUX', 200000, 2, 1, 'OCEAN', 1);
-INSERT INTO room_type VALUES ('FAMILY', 400000, 4, 3, 'CITY', 2);
+INSERT INTO room_type VALUES ('STANDARD', 120000, 2, 1, 'CITY', 0);
+INSERT INTO room_type VALUES ('DELUX', 180000, 2, 1, 'OCEAN', 1);
+INSERT INTO room_type VALUES ('FAMILY', 270000, 4, 3, 'CITY', 2);
 
 INSERT INTO room VALUES (201, 'FAMILY', 1, 1);
 INSERT INTO room VALUES (202, 'FAMILY', 1, 1);
