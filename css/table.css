@@ -1,0 +1,46 @@
+.sub_nav_title {
+    font-family: 'NanumMyeongjo' !important;
+    font-size: 18px;
+    color: #848484;
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+.widget:before, .widget:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sidebar .widget, .sidebar-content .widget {
+    border-top: 1px solid rgba(51,51,51,0.15);
+    color: #333333;
+    font-size: 13px;
+    line-height: 22px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+.sub_nav .menu li {
+    padding: 11px 20px;
+    margin: 0;
+    font-size: 14px;
+}
+
+/*.menu li {*/
+/*    position: relative;*/
+/*    margin: 9px 0 0 0;*/
+/*    padding: 10px 0 0 0;*/
+/*    display: list-item;*/
+/*    text-align: -webkit-match-parent;*/
+/*}*/
+
+/*.menu ul {*/
+/*    display: block;*/
+/*    list-style-type: disc;*/
+/*    margin-block-start: 1em;*/
+/*    margin-block-end: 1em;*/
+/*    margin-inline-start: 0px;*/
+/*    margin-inline-end: 0px;*/
+/*    padding-inline-start: 40px;*/
+/*}*/

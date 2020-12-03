@@ -25,7 +25,7 @@
     <!-- flaticon CSS -->
     <link rel="stylesheet" href="css/flaticon.css">
     <!-- fontawesome CSS -->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- magnific CSS -->
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/gijgo.min.css">
@@ -69,6 +69,9 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="rooms.html">Rooms</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="packages.html">packages</a>
@@ -255,9 +258,6 @@
                                 <label><input type = "checkbox" onclick = select_room() id = 'room' class = 'select' name = 'rooms[]' value='208'/><span>208</span></label>
                             </div>
                         </div>
-                        <!-- <div class= "col-md-1 light_height_padding">
-                        <label for=""></label>
-                        </div> -->
                     </div>
                 </div>
 

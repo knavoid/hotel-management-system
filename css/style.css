@@ -44,6 +44,10 @@ input:hover, input:focus {
   padding: 0px 10px;
 }
 
+.bottom_padding{
+  padding-bottom: 130px;
+}
+
 .height_padding{
   padding: 130px 0px;
 }
@@ -2710,6 +2714,10 @@ ul {
   z-index: 1;
 }
 
+.about_us .text_center{
+  text-align: center;
+}
+
 /* line 6, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_about.scss */
 .about_us .about_img img {
   width: 100%;
@@ -2762,6 +2770,35 @@ ul {
     line-height: 45px;
   }
 }
+
+
+.about_us .about_text h1 {
+  line-height: 56px;
+  margin-bottom: 21px;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+@media (max-width: 991px) {
+  /* line 24, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_about.scss */
+  .about_us .about_text h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    line-height: 35px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  /* line 24, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_about.scss */
+  .about_us .about_text h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 45px;
+  }
+}
+
+
+
 
 /* line 41, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_about.scss */
 .about_us .about_text p {

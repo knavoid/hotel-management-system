@@ -18,7 +18,7 @@
     <!-- flaticon CSS -->
     <link rel="stylesheet" href="css/flaticon.css">
     <!-- fontawesome CSS -->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- magnific CSS -->
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/gijgo.min.css">
@@ -55,6 +55,9 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                            <a class="nav-link" href="rooms.html">Rooms</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="packages.html">packages</a>
@@ -98,7 +101,7 @@
                 <div class="col-lg-10">
                     <div class="banner_text text-center">
                         <div class="banner_text_iner">
-                            <h1>Martine Hotel</h1>
+                            <h1>B Hotel</h1>
                             <p>Let’s start your journey with us, your dream will come true</p>
                             <a href="select_option.php" class="btn_1">Book Now</a>
                         </div>

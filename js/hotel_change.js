@@ -13,14 +13,9 @@ function showRoom(){
 }
 
 
-function setBtnColor(e) {
-    var target = e.target,
-        count = +target.dataset.count;
-     target.style.backgroundColor = count === 1 ? '#FFFFFF':"#fe5c24";
-     target.style.borderColor = count === 1 ? "#2493e0":"#FFFFFF";
-     target.style.color = count === 1 ? "#2493e0":"#FFFFFF";
-     target.dataset.count = count === 1 ? 0 : 1;
-  }
+
+
+
 
 /*만약 room의 갯수가 초과하면, 더 이상 버튼을 누를 수 없게끔 만든다. */
 // function select_room(){

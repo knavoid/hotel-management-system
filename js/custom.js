@@ -1,9 +1,52 @@
 (function ($) {
   "use strict";
 
-  var review = $('.client_review_slider');
+  var review = $('.room_hotels');
   if (review.length) {
     review.owlCarousel({
+      items: 3,
+      loop: true,
+      dots: false,
+      autoplay: true,
+      margin: 40,
+      autoplayHoverPause: true,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        }
+      }
+    });
+  }
+//
+// $(".room_small>img").click(function(){
+//
+//     to.owl
+//
+//     ;})
+  var room_select = $(".room_small>img");
+
+  for (let i = 0; i<room_select.length; i++){
+    $(room_select[i]).click(function(){
+    review.trigger('to.owl.carousel',[i,300]);
+    })
+  }
+
+// Go to the next item
+$('.slick-next').click(function() {
+    review.trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('.slick-prev').click(function() {
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    review.trigger('prev.owl.carousel');
+})
+
+var client = $('.client_review_slider');
+  if (client.length) {
+    client.owlCarousel({
       items: 3,
       loop: true,
       dots: false,
@@ -37,6 +80,8 @@
       }
     });
   }
+
+
   var event = $('.event_slider');
   if (event.length) {
     event.owlCarousel({
