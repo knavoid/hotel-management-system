@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>BHotel</title>
-    <!-- <link rel="icon" href="img/favicon.png"> -->
+    <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- animate CSS -->
     <link rel="stylesheet" href="css/animate.css">
@@ -134,7 +134,7 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
                                 <div class="booking_form">
-                                    <form action="hotel_room.php" method="POST" name="reservation" onsubmit="showRoom(); return isValidDate();">
+                                    <form action="hotel_room.php" method="POST" name="reservation" onsubmit="return isValidDate();">
                                         <div class="form-row">
 
                                             <div class="form_colum">
