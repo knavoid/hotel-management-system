@@ -73,7 +73,7 @@
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item" href="reservation_content.php">Reservation Contents</a>
-											<a class="dropdown-item" href="#">Complain</a>
+											<a class="dropdown-item" href="action/guest_signout.php">Sign Out</a>
 										</div>
 									</li>
                                 </ul>

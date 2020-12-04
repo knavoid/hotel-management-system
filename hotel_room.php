@@ -13,7 +13,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>BHotel</title>
+    <title>BHotel | Select Rooms</title>
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- animate CSS -->
@@ -87,7 +87,7 @@
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item" href="reservation_content.php">Reservation Contents</a>
-											<a class="dropdown-item" href="#">Complain</a>
+											<a class="dropdown-item" href="action/guest_signout.php">Sign Out</a>
 										</div>
 									</li>
                                 </ul>
