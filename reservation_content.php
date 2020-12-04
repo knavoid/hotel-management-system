@@ -182,7 +182,7 @@
     
                                 <p>Period: <?= $dates[$i][0] ?> ~ <?= $dates[$i][count($dates[$i]) - 1] ?> </p>
 
-                                <form action="action/reservation_cancel.php" method="post">
+                                <form action="action/reservation_cancel.php" method="post" onsubmit="return confirm_cancel()">
                                     <input type="hidden" name="reservation_code" value="<?= $reservation_code[$i] ?>">
                                     <input type="submit" value="Cancel">
                                 </form>
@@ -303,9 +303,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/contact.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
-    
-    <script src="js/room_select.js" type="text/javascript"></script>
-    
+    <script src="js/room_select.js"></script>
+    <script src="js/confirm.js"></script>
 </body>
 
 </html>
