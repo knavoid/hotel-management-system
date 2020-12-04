@@ -28,7 +28,17 @@
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
-    
-    echo "<script> alert('Sign up completed!'); </script>";
-    echo "<script> location.href='../guest_signin_page.php'; </script>";
-?>
+?>   
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script>
+        Swal.fire({
+            icon: 'info',
+            text: "Sign up completed!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.href='../guest_signin_page.php';
+            }
+        });
+    </script>
+</body> 

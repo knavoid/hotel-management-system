@@ -164,7 +164,7 @@
                     <?php } ?>
                     <input type="hidden" id="nights" value="<?= $nights ?>">
 
-                    <form action="action/reservation.php" method="post" onsubmit="return confirm_reservation()">
+                    <form action="action/reservation.php" method="post">
 
                         <input type="hidden" name="cid" value="<?= $_POST['cid']; ?>">
                         <input type="hidden" name="cod" value="<?= $_POST['cod']; ?>">
@@ -334,6 +334,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/room_select.js"></script>
     <script src="js/payment.js"></script>
     <script src="js/confirm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 
 </html>

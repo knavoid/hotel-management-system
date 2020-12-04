@@ -39,7 +39,25 @@
         echo "<script> alert('An error has occurred. Please select a room again.'); </script>";
         echo "<script> location.href='../payment.php'; </script>";
     }
-    
-    echo "<script> alert('Your reservation has been received!'); </script>";
-    echo "<script> location.href='../index.php'; </script>";
 ?>
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+    Swal.fire({
+        text: "Are you sure you want to confirm your reservation by paying?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        Swal.fire({
+            icon: 'info',
+            text: "Your reservation has been received!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.href='../index.php';
+            }
+        });
+    })
+</script>
+</body> 

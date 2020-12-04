@@ -103,7 +103,11 @@
                         <div class="banner_text_iner">
                             <h1>B Hotel</h1>
                             <p>Let’s start your journey with us, your dream will come true</p>
-                            <a href="select_option.php" class="btn_1">Book Now</a>
+                            <?php if (isset($_SESSION['customer_id'])) { ?>
+                                <a href="select_option.php" class="btn_1">Book Now</a>
+                            <?php } else { ?>
+                                <a class="btn_1" onclick="notation()">Book Now</a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -644,6 +648,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/custom.js"></script>
 
     <script src="js/index_form.js" type="text/javascript"></script>
+    <script src="js/notation.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 
 </html>
