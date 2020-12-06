@@ -28,13 +28,10 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/slick-slider.css">
-    <link rel="stylesheet" href="css/table.css">
-    <link rel="stylesheet" href ="css/rooms.css">
+</head>
 
 <body>
-    <!--::header part start::-->
+   <!--::header part start::-->
     <header class="main_menu">
             <div class="main_menu_iner">
                 <div class="container">
@@ -55,16 +52,16 @@
                                             <a class="nav-link" href="index.php">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="about.html">About</a>
+                                            <a class="nav-link" href="about.php">About</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="rooms.html">Rooms</a>
+                                            <a class="nav-link" href="rooms.php">Rooms</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="packages.html">packages</a>
+                                            <a class="nav-link" href="packages.php">packages</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="contact.html">Contact</a>
+                                            <a class="nav-link" href="contact.php">Contact</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -78,15 +75,19 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
-                                <a href="select_option.php" class="btn_1 d-none d-lg-block">Book Now</a>
+                                </div><?php if (isset($_SESSION['customer_name'])) { ?>
+                                    <p>Welcome, <?= $_SESSION['customer_name'] ?></p>
+                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
+                                <?php } else {?>
+                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                                <?php } ?>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Header part end-->
+    <!-- Header part end-->
 
     <!-- breadcrumb start-->
     <section class="breadcrumb breadcrumb_bg">
@@ -95,8 +96,8 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item text-center">
-                            <h2>Rooms</h2>
-                            <p>home . about us</p>
+                            <h2>contact</h2>
+                            <p>home . contact</p>
                         </div>
                     </div>
                 </div>
@@ -105,52 +106,70 @@
     </section>
     <!-- breadcrumb start-->
 
-    <!-- about us css start-->
-    <section class="room">
-
+    <!-- ================ contact section start ================= -->
+    <section class="contact-section">
         <div class="container">
-            <div class="row align-items-top room_padding">
-                <div class ="col-lg-3">
-                    <div class ="sub_nav_title"><h2>Rooms</h2>B Hotel</div>
-                    <div class = "sub_nav">
-                        <ui class ="menu">
-                            <li><a href = 'standard_room.html'>Standard Room</a></li>
-                            <li><a href = 'family_room.html'>Family Room</a></li>
-                            <li><a href = 'deluxe_room.html'>Deluxe Room</a></li>
-                        </ui>
-                    </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="contact-title">Get in Touch</h2>
                 </div>
-                <div class ="about_text col-lg-9 text_center">
-                    <div class = "content_padding">
-                        <h2>Standard Rooms</h2>
-                    </div>
-                    <div class = "sub-img-slider slick-initialized slick-slider">
-                        <button type = "button" class = "slick-prev slick-arrow" role = "button" style = "display:block;"><span class="fa fa-2x fa-angle-left"></span></button>
-                        <div class="about_img room_hotels owl-carousel">
-                            <div class="single_review_slider">
-                                <img src="img/hotels/standard/standard1.jpg" alt="#">
+                <div class="col-lg-8">
+                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+
+                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder='Enter Message'></textarea>
+                                </div>
                             </div>
-                            <div class="single_review_slider">
-                                <img src="img/hotels/standard/standard2.jpg" alt="#">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder='Enter your name'>
+                                </div>
                             </div>
-                            <div class="single_review_slider">
-                                <img src="img/hotels/standard/standard3.jpg" alt="#">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder='Enter email address'>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder='Enter Subject'>
+                                </div>
                             </div>
                         </div>
-                        <button type = "button" class = "slick-next slick-arrow" role = "button" style = "display:block;"><span class="fa fa-2x fa-angle-right"></span></button>
+                        <div class="form-group mt-3">
+                            <button type="submit" class="button button-contactForm btn_1">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-home"></i></span>
+                        <div class="media-body">
+                            <h3>Buttonwood, California.</h3>
+                            <p>Rosemead, CA 91770</p>
+                        </div>
                     </div>
-                    <div class = "room_small">
-                        <img src="img/hotels/standard/standard1.jpg" alt="#">
-                        <img src="img/hotels/standard/standard2.jpg" alt="#">
-                        <img src="img/hotels/standard/standard3.jpg" alt="#">
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                        <div class="media-body">
+                            <h3>00 (440) 9865 562</h3>
+                            <p>Mon to Fri 9am to 6pm</p>
+                        </div>
+                    </div>
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-email"></i></span>
+                        <div class="media-body">
+                            <h3>support@colorlib.com</h3>
+                            <p>Send us your query anytime!</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!--top place end-->
-
+    <!-- ================ contact section end ================= -->
 
     <!-- footer part start-->
     <footer class="footer-area">
@@ -180,17 +199,12 @@
                     <div class="single-footer-widget">
                         <h4>Subscribe Newsletter</h4>
                         <div class="form-wrap" id="mc_embed_signup">
-                            <form target="_blank"
-                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="form-inline">
-                                <input class="form-control" name="EMAIL" placeholder="Your Email Address"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
-                                    required="" type="email">
+                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+                                <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" required="" type="email">
                                 <button class="click-btn btn btn-default text-uppercase"> <i class="far fa-paper-plane"></i>
                                 </button>
                                 <div style="position: absolute; left: -5000px;">
-                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                        type="text">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                                 </div>
 
                                 <div class="info"></div>
@@ -202,8 +216,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="single-footer-widget footer_icon">
                         <h4>Contact Us</h4>
-                        <p>4156, New garden, New York, USA
-                                +880 362 352 783</p>
+                        <p>4156, New garden, New York, USA +880 362 352 783</p>
                         <span>contact@martine.com</span>
                         <div class="social-icons">
                             <a href="#"><i class="ti-facebook"></i></a>

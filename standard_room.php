@@ -55,16 +55,16 @@
                                             <a class="nav-link" href="index.php">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="about.html">About</a>
+                                            <a class="nav-link" href="about.php">About</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="rooms.html">Rooms</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="packages.html">packages</a>
+                                            <a class="nav-link" href="packages.php">packages</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="contact.html">Contact</a>
+                                            <a class="nav-link" href="contact.php">Contact</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -79,7 +79,12 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="select_option.php" class="btn_1 d-none d-lg-block">Book Now</a>
+                                <?php if (isset($_SESSION['customer_name'])) { ?>
+                                    <p>Welcome, <?= $_SESSION['customer_name'] ?></p>
+                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
+                                <?php } else {?>
+                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                                <?php } ?>
                             </nav>
                         </div>
                     </div>
@@ -122,32 +127,33 @@
                 </div>
                 <div class ="about_text col-lg-9 text_center">
                     <div class = "content_padding">
-                        <h2>Deluxe Rooms</h2>
+                        <h2>Standard Rooms</h2>
                     </div>
-                <div class = "sub-img-slider slick-initialized slick-slider">
+                    <div class = "sub-img-slider slick-initialized slick-slider">
                         <button type = "button" class = "slick-prev slick-arrow" role = "button" style = "display:block;"><span class="fa fa-2x fa-angle-left"></span></button>
                         <div class="about_img room_hotels owl-carousel">
                             <div class="single_review_slider">
-                                <img src="img/hotels/delux/deluxe1.jpg" alt="#">
+                                <img src="img/hotels/standard/standard1.jpg" alt="#">
                             </div>
                             <div class="single_review_slider">
-                                <img src="img/hotels/delux/deluxe2.jpg" alt="#">
+                                <img src="img/hotels/standard/standard2.jpg" alt="#">
                             </div>
                             <div class="single_review_slider">
-                                <img src="img/hotels/delux/deluxe3.jpg" alt="#">
+                                <img src="img/hotels/standard/standard3.jpg" alt="#">
                             </div>
                         </div>
                         <button type = "button" class = "slick-next slick-arrow" role = "button" style = "display:block;"><span class="fa fa-2x fa-angle-right"></span></button>
                     </div>
                     <div class = "room_small">
-                        <img src="img/hotels/delux/deluxe1.jpg" alt="#">
-                        <img src="img/hotels/delux/deluxe2.jpg" alt="#">
-                        <img src="img/hotels/delux/deluxe3.jpg" alt="#">
+                        <img src="img/hotels/standard/standard1.jpg" alt="#">
+                        <img src="img/hotels/standard/standard2.jpg" alt="#">
+                        <img src="img/hotels/standard/standard3.jpg" alt="#">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!--top place end-->
 
 

@@ -52,7 +52,7 @@
                                         <a class="nav-link" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="about.html">About</a>
+                                        <a class="nav-link" href="about.php">About</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="rooms.html">Rooms</a>
@@ -61,7 +61,7 @@
                                         <a class="nav-link" href="packages.html">packages</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="contact.html">Contact</a>
+                                        <a class="nav-link" href="contact.php">Contact</a>
                                     </li>
                                     <li class="nav-item dropdown">
 										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -76,7 +76,12 @@
 									</li>
                                 </ul>
                             </div>
-                            <a href="select_option.php" class="btn_1 d-none d-lg-block">Book Now</a>
+                            <?php if (isset($_SESSION['customer_name'])) { ?>
+                                    <p>Welcome, <?= $_SESSION['customer_name'] ?></p>
+                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
+                                <?php } else {?>
+                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                            <?php } ?>
                         </nav>
                     </div>
                 </div>
@@ -108,7 +113,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="section_tittle text-center">
-                        <h2>Top Activity &amp; Restaurants</h2>
+                        <h2>Top Activity</h2>
                         <p>Various entertainment and restaurants in Jeju Island will make your vacation fun.</p>
                     </div>
                 </div>
@@ -132,11 +137,11 @@
                         <div class="hotel_text_iner">
                             <h3> <a href="#"> Taekwondo Musical Soul</a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                 <span>(150 review)</span>
                             </div>
                             <p>Jeju island, Republic of Korea</p>
@@ -164,11 +169,11 @@
                         <div class="hotel_text_iner">
                             <h3> <a href="#"> Yeondon</a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
                                 <span>(1000 review)</span>
                             </div>
                             <p>Jeju island, Republic of Korea</p>
@@ -198,11 +203,11 @@
                         <div class="hotel_text_iner">
                             <h3> <a href="#"> Cong</a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                 <span>(250 review)</span>
                             </div>
                             <p>Jeju island, Republic of Korea</p>
