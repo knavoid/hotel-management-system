@@ -216,14 +216,13 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn_1 text-cnter">Discover more</a>
             </div>
         </div>
     </section>
     <!--top place end-->
 
     <!--top place start-->
-    <section class="event_part section_padding">
+     <section class="event_part section_padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -233,20 +232,20 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="event_slider_content">
                                         <h5>Upcoming Event</h5>
-                                        <h2>Maldeve - Asia</h2>
-                                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.
+                                        <h2>Seongsan Ilchulbong </h2>
+                                        <p>The Seongsan Ilchulbong package is the most purchased by people who have traveled to Jeju Island.
                                         </p>
-                                        <p>date: <span>12 Aug 2019</span> </p>
-                                        <p>Cost: <span>Start from $820</span> </p>
-                                        <p>Organizer: <span> Martine Agency</span> </p>
+                                        <p>date: <span>12 Aug 2020</span> </p>
+                                        <p>Cost: <span>Start from $920</span> </p>
+                                        <p>Organizer: <span> SM Agency</span> </p>
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>
@@ -259,20 +258,19 @@
                                 <div class="ol-lg-6 col-md-6">
                                     <div class="event_slider_content">
                                         <h5>Upcoming Event</h5>
-                                        <h2>Maldeve - Asia</h2>
-                                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.
-                                        </p>
-                                        <p>date: <span>12 Aug 2019</span> </p>
-                                        <p>Cost: <span>Start from $820</span> </p>
-                                        <p>Organizer: <span> Martine Agency</span> </p>
+                                        <h2>Halla Mountain</h2>
+                                        <p>Hallasan Mountain is the symbol of Jeju Island. You can experience various paths to climb Mt. Halla.</p>
+                                        <p>date: <span>20 Aug 2020</span> </p>
+                                        <p>Cost: <span>Start from $720</span> </p>
+                                        <p>Organizer: <span> JYP Agency</span> </p>
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>
@@ -285,20 +283,19 @@
                                 <div class="ol-lg-6 col-md-6">
                                     <div class="event_slider_content">
                                         <h5>Upcoming Event</h5>
-                                        <h2>Maldeve - Asia</h2>
-                                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.
-                                        </p>
-                                        <p>date: <span>12 Aug 2019</span> </p>
-                                        <p>Cost: <span>Start from $820</span> </p>
-                                        <p>Organizer: <span> Martine Agency</span> </p>
+                                        <h2>Udo Island</h2>
+                                        <p>Black day after tomorrow.clean sea color, etc. We will give another attractive Jeju as a present.</p>
+                                        <p>date: <span>12 Jan 2021</span> </p>
+                                        <p>Cost: <span>Start from $620</span> </p>
+                                        <p>Organizer: <span> Big Hit Agency</span> </p>
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>
