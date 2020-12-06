@@ -35,8 +35,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>BHotel</title>
-    <!-- <link rel="icon" href="img/favicon.png"> -->
+    <title>BHotel | Payment</title>
+    <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- animate CSS -->
     <link rel="stylesheet" href="css/animate.css">
@@ -65,6 +65,17 @@
     <link rel="stylesheet" href="css/hotel_room.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        table {
+            width: 500px;
+            border-top: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        th, td {
+            border-bottom: 1px solid #444444;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -108,7 +119,7 @@
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item" href="reservation_content.php">Reservation Contents</a>
-											<a class="dropdown-item" href="#">Complain</a>
+											<a class="dropdown-item" href="action/guest_signout.php">Sign Out</a>
 										</div>
 									</li>
                                 </ul>
@@ -169,9 +180,43 @@
                         <?php } ?>
                     
                         <div>
-                            <h3>Order Rooms Total<b class="price1" style="margin-left:133px;"><?=$price * $nights?></b></h3>
-                            <h3>Additional Payment<b class="price2" style="margin-left:126px;">0</b></h3>
-                            <h3>Amount Paid<b class="price3" style="margin-left:200px;"></b></h3>
+                            <div>
+                                <p>
+                                    <?= $nights + 1 ?>days <?= $nights ?>
+                                    <?php if ($nights == 1) { ?>
+                                        night
+                                    <?php } else { ?>
+                                        nights
+                                    <?php } ?> / <?= count($rooms) ?>
+                                    <?php if ($rooms == 1) { ?>
+                                        room
+                                    <?php } else { ?>
+                                        rooms
+                                    <?php } ?>
+                                </p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Room Type</th><th>Price</th><th>Limit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Standard</td><td>₩120,000</td><td>2 people</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delux</td><td>₩180,000</td><td>2 people</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Family</td><td>₩270,000</td><td>4 people</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p style="font-size:13px;">* If the limit is exceeded, an additional charge of ₩22,000 per person will be charged.</p>
+                            </div>
+                            <h3>Order Rooms Total<b style="margin-left:133px;">₩</b><b class="price1"><?=$price * $nights?></b></h3>
+                            <h3>Additional Payment<b style="margin-left:126px;">₩</b><b class="price2">0</b></h3>
+                            <h3>Amount Paid<b style="margin-left:200px;">₩</b><b class="price3"></b></h3>
                         </div>
 
                         <input type="submit" value="book">
@@ -288,6 +333,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/index_form.js"></script>
     <script src="js/room_select.js"></script>
     <script src="js/payment.js"></script>
+    <script src="js/confirm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 
 </html>

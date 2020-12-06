@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>BHotel</title>
+    <title>BHotel | About</title>
     <link rel="icon" href="img/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -52,16 +52,16 @@
                                             <a class="nav-link" href="index.php">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="about.php">About</a>
+                                            <a class="nav-link" href="about.html">About</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="rooms.php">Rooms</a>
+                                            <a class="nav-link" href="rooms.html">Rooms</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="packages.php">packages</a>
+                                            <a class="nav-link" href="packages.html">packages</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="contact.php">Contact</a>
+                                            <a class="nav-link" href="contact.html">Contact</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -75,12 +75,8 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </div>                                <?php if (isset($_SESSION['customer_name'])) { ?>
-                                    <p>Welcome, <?= $_SESSION['customer_name'] ?></p>
-                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
-                                <?php } else {?>
-                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
-                                <?php } ?>
+                                </div>
+                                <a href="select_option.php" class="btn_1 d-none d-lg-block">Book Now</a>
                             </nav>
                         </div>
                     </div>

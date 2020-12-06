@@ -6,37 +6,55 @@ function checkInformation() {
     var phone = document.getElementById("phone").value;
 
     if (id === "") {
-        alert("Please enter your ID");
+        Swal.fire({
+            icon: 'info',
+            text: "Please enter your ID.",
+        });
         document.getElementById("id").focus();
         return false;
     }
 
     if (pw === "") {
-        alert("Please enter your password");
+        Swal.fire({
+            icon: 'info',
+            text: "Please enter your password.",
+        });
         document.getElementById("password").focus();
         return false;
     }
 
     if (cpw === "") {
-        alert("Please enter your confirm password");
+        Swal.fire({
+            icon: 'info',
+            text: "Please enter your confirm password.",
+        });
         document.getElementById("password2").focus();
         return false;
     }
 
     if (name === "") {
-        alert("Please enter your name");
+        Swal.fire({
+            icon: 'info',
+            text: "Please enter your name.",
+        });
         document.getElementById("name").focus();
         return false;
     }
     
     if (phone === "") {
-        alert("Please enter your phone number");
+        Swal.fire({
+            icon: 'info',
+            text: "Please enter your phone number.",
+        });
         document.getElementById("phone").focus();
         return false;
     }
 
     if (pw !== cpw) {
-        alert("Passwords do not match.");
+        Swal.fire({
+            icon: 'info',
+            text: "Passwords do not match.",
+        });
         document.getElementById("password2").focus();
         return false;
     }
