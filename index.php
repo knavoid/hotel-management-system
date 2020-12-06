@@ -156,11 +156,11 @@
                                 <h3>Saintmartine Iceland</h3>
                                 <p>Technaf, Bangladesh</p>
                                 <div class="place_review">
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
                                     <span>(210 review)</span>
                                 </div>
                             </div>
@@ -327,7 +327,7 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_ihotel_list">
-                        <img src="img/ind/industries_1.png" alt="">
+                        <a href ="https://www.thepinx.co.kr/en/biotopia/web/restaurant.px"> <img src="img/ind/industries_1.png" alt=""> </a>
                         <div class="hover_text">
                             <div class="hotel_social_icon">
                                 <ul>
@@ -341,23 +341,23 @@
                             </div>
                         </div>
                         <div class="hotel_text_iner">
-                            <h3> <a href="#"> Hotel Polonia</a></h3>
+                            <h3> <a href="https://www.thepinx.co.kr/en/biotopia/web/restaurant.px">Restaurant Biotopia</a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
                                 <span>(210 review)</span>
                             </div>
-                            <p>London, United Kingdom</p>
-                            <h5>From <span>$500</span></h5>
+                            <p>Seogwipo-si, Jeju</p>
+                            <h5>From <span>$120</span></h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_ihotel_list">
-                        <img src="img/ind/industries_2.png" alt="">
+                        <a href="https://www.instagram.com/piccolacucina_jeju/"><img src="img/ind/industries_2.png" alt=""> </a>
                         <div class="hover_text">
                             <div class="hotel_social_icon">
                                 <ul>
@@ -371,23 +371,23 @@
                             </div>
                         </div>
                         <div class="hotel_text_iner">
-                            <h3> <a href="#"> Hotel Polonia</a></h3>
+                            <h3> <a href="https://www.instagram.com/piccolacucina_jeju/">Restaurant Piccolacucina </a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <span>(210 review)</span>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-o"></i></a>
+                                <span>(126 review)</span>
                             </div>
-                            <p>London, United Kingdom</p>
-                            <h5>From <span>$500</span></h5>
+                            <p>Jeju-si, Jeju</p>
+                            <h5>From <span>$100</span></h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_ihotel_list">
-                        <img src="img/ind/industries_3.png" alt="">
+                        <a href="https://www.instagram.com/odett_jeju/"><img src="img/ind/industries_3.png" alt=""></a>
                         <div class="hover_text">
                             <div class="hover_text">
                                 <div class="hotel_social_icon">
@@ -403,17 +403,17 @@
                             </div>
                         </div>
                         <div class="hotel_text_iner">
-                            <h3> <a href="#"> Hotel Polonia</a></h3>
+                            <h3> <a href="https://www.instagram.com/odett_jeju/"> Restaurant Odett</a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                 <span>(210 review)</span>
                             </div>
-                            <p>London, United Kingdom</p>
-                            <h5>From <span>$500</span></h5>
+                            <p>Jeju-si, Jeju</p>
+                            <h5>From <span>$100</span></h5>
                         </div>
                     </div>
                 </div>
