@@ -105,16 +105,16 @@
                                         <a class="nav-link" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="about.html">About</a>
+                                        <a class="nav-link" href="about.php">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="rooms.html">Rooms</a>
+                                        <a class="nav-link" href="rooms.php">Rooms</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="packages.html">packages</a>
+                                        <a class="nav-link" href="packages.php">packages</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="contact.html">Contact</a>
+                                        <a class="nav-link" href="contact.php">Contact</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
