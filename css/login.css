@@ -1,0 +1,38 @@
+.login {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    z-index: 1;
+}
+
+.login h1 {
+    font-weight : 900;
+    font-size : 80px;
+    padding-bottom : 20px;
+}
+
+.login .input_row {
+    position: relative;
+    height: 30%;
+    margin-bottom: 20px;
+    padding: 7px 35px 10px 11px;
+    border: solid 1px #dadada;
+    background: #fff;
+    width:100%;
+    max-width: 450px;
+    font-size : 16px;
+}
+.login .title{
+    display: flex;
+}
+
+.login .btn_1{
+    width: 100%;
+    max-width: 450px;
+}
+login_padding {
+  padding: 106px 0 53px;
+}
+.login p {
+    padding-top : 30px;
+}
