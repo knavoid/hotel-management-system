@@ -120,8 +120,8 @@
                     <div class = "sub_nav">
                         <ui class ="menu">
                             <li><a href = 'standard_room.php'>Standard Room</a></li>
-                            <li><a href = 'family_room.html'>Family Room</a></li>
-                            <li><a href = 'deluxe_room.html'>Deluxe Room</a></li>
+                            <li><a href = 'family_room.php'>Family Room</a></li>
+                            <li><a href = 'deluxe_room.php'>Deluxe Room</a></li>
                         </ui>
                     </div>
                 </div>
