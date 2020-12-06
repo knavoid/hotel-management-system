@@ -29,9 +29,17 @@
     cursor: pointer;
     top: 50%;
     margin-top: -50px;
-    font-size: 0;
     border: 0;
+    color: white;
+    opacity: 0;
+    transition: 0.5s ease;
 }
+
+.sub-img-slider:hover .slick-arrow
+{
+    opacity: 1;
+}
+
 .sub-img-slider .slick-next {
     right: 0;
     background: rgba(34, 34, 34, 0.8) url(../img/icon/next-cursor.png) no-repeat center;
