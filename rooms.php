@@ -79,7 +79,12 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="select_option.php" class="btn_1 d-none d-lg-block">Book Now</a>
+                                <?php if (isset($_SESSION['customer_name'])) { ?>
+                                    <p>Welcome, <?= $_SESSION['customer_name'] ?></p>
+                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
+                                <?php } else {?>
+                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                                <?php } ?>
                             </nav>
                         </div>
                     </div>
@@ -113,9 +118,9 @@
                     <div class ="sub_nav_title"><h2>Rooms</h2>B Hotel</div>
                     <div class = "sub_nav">
                         <ui class ="menu">
-                            <li><a href = 'standard_room.html'>Standard Room</a></li>
-                            <li><a href = 'family_room.html'>Family Room</a></li>
-                            <li><a href = 'deluxe_room.html'>Deluxe Room</a></li>
+                            <li><a href = 'standard_room.php'>Standard Room</a></li>
+                            <li><a href = 'family_room.php'>Family Room</a></li>
+                            <li><a href = 'deluxe_room.php'>Deluxe Room</a></li>
                         </ui>
                     </div>
                 </div>

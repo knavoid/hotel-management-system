@@ -76,7 +76,12 @@
 									</li>
                                 </ul>
                             </div>
-                            <a href="select_option.php" class="btn_1 d-none d-lg-block">Book Now</a>
+                            <?php if (isset($_SESSION['customer_name'])) { ?>
+                                    <p>Welcome, <?= $_SESSION['customer_name'] ?></p>
+                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
+                                <?php } else {?>
+                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                            <?php } ?>
                         </nav>
                     </div>
                 </div>
@@ -108,7 +113,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="section_tittle text-center">
-                        <h2>Top Activity &amp; Restaurants</h2>
+                        <h2>Top Activity & Restaurants</h2>
                         <p>Various entertainment and restaurants in Jeju Island will make your vacation fun.</p>
                     </div>
                 </div>
@@ -132,11 +137,11 @@
                         <div class="hotel_text_iner">
                             <h3> <a href="#"> Taekwondo Musical Soul</a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                 <span>(150 review)</span>
                             </div>
                             <p>Jeju island, Republic of Korea</p>
@@ -164,11 +169,11 @@
                         <div class="hotel_text_iner">
                             <h3> <a href="#"> Yeondon</a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
                                 <span>(1000 review)</span>
                             </div>
                             <p>Jeju island, Republic of Korea</p>
@@ -198,11 +203,11 @@
                         <div class="hotel_text_iner">
                             <h3> <a href="#"> Cong</a></h3>
                             <div class="place_review">
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                 <span>(250 review)</span>
                             </div>
                             <p>Jeju island, Republic of Korea</p>
@@ -237,11 +242,11 @@
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>
@@ -255,19 +260,18 @@
                                     <div class="event_slider_content">
                                         <h5>Upcoming Event</h5>
                                         <h2>Halla Mountain</h2>
-                                        <p>Hallasan Mountain is the symbol of Jeju Island. You can experience various paths to climb Mt. Halla.
-                                        </p>
+                                        <p>Hallasan Mountain is the symbol of Jeju Island. You can experience various paths to climb Mt. Halla.</p>
                                         <p>date: <span>20 Aug 2020</span> </p>
                                         <p>Cost: <span>Start from $720</span> </p>
                                         <p>Organizer: <span> JYP Agency</span> </p>
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>
@@ -280,20 +284,19 @@
                                 <div class="ol-lg-6 col-md-6">
                                     <div class="event_slider_content">
                                         <h5>Upcoming Event</h5>
-                                        <h2>Maldeve - Asia</h2>
-                                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.
-                                        </p>
-                                        <p>date: <span>12 Aug 2019</span> </p>
-                                        <p>Cost: <span>Start from $820</span> </p>
-                                        <p>Organizer: <span> Martine Agency</span> </p>
+                                        <h2>Udo Island</h2>
+                                        <p>Black day after tomorrow.clean sea color, etc. We will give another attractive Jeju as a present.</p>
+                                        <p>date: <span>12 Jan 2021</span> </p>
+                                        <p>Cost: <span>Start from $620</span> </p>
+                                        <p>Organizer: <span> Big Hit Agency</span> </p>
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star-half-o"></i></a>
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>
@@ -309,7 +312,7 @@
     <!--top place end-->
 
     <!--::industries start::-->
-    <section class="best_services light_padding">
+    <section class="best_services section_padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6">

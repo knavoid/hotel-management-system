@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>BHotel | About</title>
+    <title>BHotel `| About`</title>
     <link rel="icon" href="img/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -76,7 +76,12 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="select_option.php" class="btn_1 d-none d-lg-block">Book Now</a>
+                                <?php if (isset($_SESSION['customer_name'])) { ?>
+                                    <p>Welcome, <?= $_SESSION['customer_name'] ?></p>
+                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
+                                <?php } else {?>
+                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                                <?php } ?>
                             </nav>
                         </div>
                     </div>
