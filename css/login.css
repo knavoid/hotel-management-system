@@ -22,6 +22,32 @@
     max-width: 450px;
     font-size : 16px;
 }
+
+.login .up_row {
+    position: relative;
+    height: 30%;
+    margin-bottom: 20px;
+    padding: 30px 100% 10px 11px;
+    border: solid 1px #dadada;
+    background: #fff;
+    width:100%;
+    max-width: 450px;
+    font-size : 16px;
+}
+
+.login label{
+    width : 130px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.login content{
+    margin: 0 auto;
+    max-width: 768px;
+    min-width: 460px;
+}
+
 .login .title{
     display: flex;
 }
@@ -30,6 +56,15 @@
     width: 100%;
     max-width: 450px;
 }
+.login .actions .btn_1{
+    width: 50%;
+    max-width: 450px;
+}
+.login .actions .btn_2{
+    width: 50%;
+    max-width: 450px;
+}
+
 login_padding {
   padding: 106px 0 53px;
 }

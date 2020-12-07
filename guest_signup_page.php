@@ -30,184 +30,63 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
 </head>
-
+<style>
+body {
+    background-color : #f5f6f7;
+}
+</style>
 <body>
-    <!--::header part start::-->
-    <header class="main_menu">
-        <div class="main_menu_iner">
-            <div class="container">
-                <div class="row align-items-center ">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                            <a class="navbar-brand" href="index.php"> <img src="img/logo.png" alt="logo"> </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
 
-                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
-                                id="navbarSupportedContent">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.php">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="about.php">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="rooms.php">Rooms</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="packages.php">packages</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="contact.php">Contact</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            My Page
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="reservation_content.php">Reservation Contents</a>
-                                            <a class="dropdown-item" href="#">Complain</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Header part end-->
-
-    <section class="breadcrumb breadcrumb_bg">
+    <section class="login section_padding">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb_iner">
-                        <div class="breadcrumb_iner_item text-center">
-                            <h2>Sign up</h2>
-                        </div>
-                    </div>
-                </div>
+            <div class ="row justify-content-center">
+                <a href = "index.php"><h1>B Hotel</h1></a>
             </div>
-        </div>
-    </section>
 
-    <section class="about_us section_padding">
-        <div class="container">
             <form name="HMS" method="POST" action="action/guest_signup.php" onsubmit="return checkInformation()">
-                <div class="field">
-                    <label for="name">ID</label>
-                    <input type="text" maxlength="20" name="id" id="id"/>
+            <div class = "content">
+                <div class = "row justify-content-center">
+                    <div class="field">
+                        <label for="name">ID</label>
+                        <input type="text" maxlength="20" class = "up_row" name="id" id="id"/>
+                     </div>
                 </div>
-                <div class="field">
-                    <label for="password">Password</label>
-                    <input type="password" maxlength="20" name="pw" id="password"/>
+                <div class = "row justify-content-center">
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" maxlength="20" class = "up_row" name="pw" id="password"/>
+                    </div>
                 </div>
-                <div class="field">
-                    <label for="password2">Confirm Password</label>
-                    <input type="password" maxlength="20" name="pw2" id="password2"/>
+                <div class = "row justify-content-center">
+                    <div class="field">
+                        <label for="password2">Confirm</label>
+                        <input type="password" maxlength="20" name="pw2" class = "up_row" id="password2"/>
+                    </div>
                 </div>
-                <div class="field">
-                    <label for="name">Name</label>
-                    <input type="text" maxlength="20" name="name" id="name"/>
+                <div class = "row justify-content-center">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" maxlength="20" class = "up_row" name="name" id="name"/>
+                    </div>
                 </div>
-                <div class="field">
-                    <label for="phone">Phone</label>
-                    <input type="text" maxlength="11" name="phone" id="phone"/>
+
+                <div class = "row justify-content-center">
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input type="text" maxlength="11" class = "up_row" name="phone" id="phone"/>
+                    </div>
                 </div>
-                <ul class="actions">
-                    <input type=submit value="Create Account" />
-                    <input type=reset value="Reset" />
-                </ul>
-            </form> 
+                    <ul class="actions row justify-content-center">
+                        <input type=submit  class ="btn_1" value="Create Account" />
+                        <input type=reset  class ="btn_2" value="Reset" />
+                    </ul>
+                </form>
+            </div>
         </div>
     </section>
-
-    <!-- footer part start-->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-sm-6 col-md-5">
-                    <div class="single-footer-widget">
-                        <h4>Discover Destination</h4>
-                        <ul>
-                            <li><a href="#">Miami, USA</a></li>
-                            <li><a href="#">California, USA</a></li>
-                            <li><a href="#">London, UK</a></li>
-                            <li><a href="#">Saintmartine, Bangladesh</a></li>
-                            <li><a href="#">Mount Everast, India</a></li>
-                            <li><a href="#">Sidney, Australia</a></li>
-                            <li><a href="#">Miami, USA</a></li>
-                            <li><a href="#">California, USA</a></li>
-                            <li><a href="#">London, UK</a></li>
-                            <li><a href="#">Saintmartine, Bangladesh</a></li>
-                            <li><a href="#">Mount Everast, India</a></li>
-                            <li><a href="#">Sidney, Australia</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="single-footer-widget">
-                        <h4>Subscribe Newsletter</h4>
-                        <div class="form-wrap" id="mc_embed_signup">
-                            <form target="_blank"
-                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="form-inline">
-                                <input class="form-control" name="EMAIL" placeholder="Your Email Address"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
-                                    required="" type="email">
-                                <button class="click-btn btn btn-default text-uppercase"> <i class="far fa-paper-plane"></i>
-                                </button>
-                                <div style="position: absolute; left: -5000px;">
-                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                        type="text">
-                                </div>
-
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                        <p>Subscribe our newsletter to get update news and offers</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="single-footer-widget footer_icon">
-                        <h4>Contact Us</h4>
-                        <p>4156, New garden, New York, USA
-                                +880 362 352 783</p>
-                        <span>contact@martine.com</span>
-                        <div class="social-icons">
-                            <a href="#"><i class="ti-facebook"></i></a>
-                            <a href="#"><i class="ti-twitter-alt"></i></a>
-                            <a href="#"><i class="ti-pinterest"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="copyright_part_text text-center">
-                        <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer part end-->
 
     <!-- jquery plugins here-->
     <script src="js/jquery-1.12.1.min.js"></script>

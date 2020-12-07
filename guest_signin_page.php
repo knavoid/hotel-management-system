@@ -21,13 +21,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
 </head>
-
+<style>
+    body {
+        background-color : #f5f6f7;
+    }
+</style>
 <body>
     <section class="login section_padding">
             <div class="container">
                 <form action="action/guest_signin.php" method="POST">
                  <div class ="row justify-content-center">
-                    <h1>B Hotel</h1>
+                    <a href = "index.php"><h1>B Hotel</h1></a>
                 </div>
                  <div class ="row justify-content-center">
                     <input type="text" id="id" name="id" class ="input_row" placeholder = "id">
