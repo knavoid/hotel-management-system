@@ -356,7 +356,6 @@
                 
                 <!-- 아래 input버튼이 계속 생성되지 않아 임시로 제작하였습니다. -->
                 <button class="genric-btn success radius">Next ></button>
-                <input type="submit" class = "btn_1 topic" value="다음 단계로">
                 
             </form>
 
