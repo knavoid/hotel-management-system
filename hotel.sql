@@ -96,6 +96,7 @@ CREATE TABLE reservation (
 	FOREIGN KEY(id) REFERENCES customer(id),
 	FOREIGN KEY(rnumber) REFERENCES room(rnumber)
 );
+ALTER TABLE reservation AUTO_INCREMENT=1031;
 
 CREATE TABLE reservation_log (
 	rnumber 	INTEGER,
@@ -119,7 +120,7 @@ INSERT INTO room VALUES (205, 'FAMILY', 1, 1);
 INSERT INTO room VALUES (206, 'FAMILY', 1, 1);
 INSERT INTO room VALUES (207, 'STANDARD', 1, 1);
 INSERT INTO room VALUES (208, 'STANDARD', 1, 1);
-INSERT INTO room VALUES (301, 'FAMILY', 1, 1);
+INSERT INTO room VALUES (301, 'FAMILY', 1, 0);
 INSERT INTO room VALUES (302, 'FAMILY', 1, 1);
 INSERT INTO room VALUES (303, 'STANDARD', 1, 1);
 INSERT INTO room VALUES (304, 'STANDARD', 1, 1);
@@ -168,11 +169,6 @@ INSERT INTO room VALUES (806, 'DELUX', 1, 1);
 INSERT INTO room VALUES (807, 'DELUX', 1, 1);
 INSERT INTO room VALUES (808, 'DELUX', 1, 1);
 
-INSERT INTO customer VALUES ('crh', '1234', '최라희', '01212345678');
-INSERT INTO customer VALUES ('kju', '1234', '김재욱', '01187654321');
-INSERT INTO customer VALUES ('hsh', '1234', '한시훈', '01512345678');
-INSERT INTO customer VALUES ('luj', '1234', '이은지', '01312345678');
-
 INSERT INTO staff VALUES ('m1', '12345', '이준호', '01000000000', 'manager', 1, 1);
 INSERT INTO staff VALUES ('r1', '12345', '최준호', '01011111111', 'receptionist', 1, 1);
 INSERT INTO staff VALUES ('r2', '12345', '김서준', '01022222222', 'receptionist', 1, 1);
@@ -191,6 +187,29 @@ INSERT INTO staff VALUES ('k8', '12345', '박승현', '01155555555', 'roomkeeper
 INSERT INTO staff VALUES ('k9', '12345', '박준호', '01166666666', 'roomkeeper', 0, 0);
 INSERT INTO staff VALUES ('k10', '12345', '최아린', '01177777777', 'roomkeeper', 0, 0);
 
+INSERT INTO customer VALUES ('crh', '1234', '최라희', '01212345678');
+INSERT INTO customer VALUES ('gmg', '1234', '고민건', '01812345678');
+INSERT INTO customer VALUES ('kju', '1234', '김재욱', '01187654321');
+INSERT INTO customer VALUES ('hsh', '1234', '한시훈', '01512345678');
+INSERT INTO customer VALUES ('luj', '1234', '이은지', '01312345678');
+INSERT INTO customer VALUES ('swj', '1234', '손원준', '01287654321');
+INSERT INTO customer VALUES ('psc', '1234', '박승찬', '02112345678');
+INSERT INTO customer VALUES ('jsb', '1234', '전승빈', '02812345678');
+INSERT INTO customer VALUES ('kaj', '1234', '김아진', '02212345678');
+INSERT INTO customer VALUES ('kmk', '1234', '김민기', '01612345678');
+
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('gmg', 202, 5, '2020-12-06', '2020-12-08');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('gmg', 203, 2, '2020-12-07', '2020-12-08');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('kju', 305, 4, '2020-12-07', '2020-12-08');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('hsh', 306, 4, '2020-12-07', '2020-12-08');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('luj', 506, 4, '2020-12-08', '2020-12-09');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('luj', 507, 2, '2020-12-08', '2020-12-09');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('swj', 301, 5, '2020-12-08', '2020-12-10');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('psc', 302, 4, '2020-12-08', '2020-12-10');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('jsb', 704, 2, '2020-12-09', '2020-12-10');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('jsb', 705, 4, '2020-12-09', '2020-12-10');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('kaj', 501, 4, '2020-12-09', '2020-12-11');
+INSERT INTO reservation (id, rnumber, num_guests, checkIn, checkOut) VALUES ('kmk', 508, 3, '2020-12-09', '2020-12-12');
 
 INSERT INTO customer_log (code, id, cname, rnumber, phone, checkIn, checkOut) VALUE(69, 'ljo', '이지오', 403, '01012345678', '2020-11-05', '2020-11-07');
 INSERT INTO customer_log (code, id, cname, rnumber, phone, checkIn, checkOut) VALUE(70, 'kgo', '김가온', 701, '01112345678', '2020-11-05', '2020-11-06');
