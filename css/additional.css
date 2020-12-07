@@ -139,3 +139,11 @@
     width: 30px;
     height: 33px;
 }
+
+.success {
+    font-size: 17px;
+    width: 120px;
+    height: 60px;
+    margin-left: 860px;
+    margin-bottom: 70px;
+}
