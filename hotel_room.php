@@ -93,7 +93,7 @@
                                 </ul>
                             </div>
                             <?php if (isset($_SESSION['customer_name'])) { ?>
-                                    <p>Welcome, <?= $_SESSION['customer_name'] ?></p>
+                                    <p style="margin-right:10px;">Welcome, <?= $_SESSION['customer_name'] ?></p>
                                     <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
                                 <?php } else {?>
                                     <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>

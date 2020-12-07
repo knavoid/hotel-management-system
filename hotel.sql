@@ -168,13 +168,11 @@ INSERT INTO room VALUES (806, 'DELUX', 1, 1);
 INSERT INTO room VALUES (807, 'DELUX', 1, 1);
 INSERT INTO room VALUES (808, 'DELUX', 1, 1);
 
--- INSERT INTO customer VALUES ('c1', '1234', '손님1', '01022223333');
--- INSERT INTO customer VALUES ('c2', '1234', '손님2', '01033331111');
--- INSERT INTO customer VALUES ('c3', '1234', '손님3', '01031231111');
--- INSERT INTO customer VALUES ('c4', '1234', '손님4', '01033356111');
--- INSERT INTO customer VALUES ('c5', '1234', '손님5', '01033331113');
--- INSERT INTO customer VALUES ('c6', '1234', '손님6', '01031331111');
+INSERT INTO customer VALUES ('psh', '1234', '박성훈', '01022223333');
+INSERT INTO customer VALUES ('kms', '1234', '김민성', '01033331111');
+INSERT INTO customer VALUES ('kcs', '1234', '김찬수', '01031231111');
+INSERT INTO customer VALUES ('jhs', '1234', '지호성', '01033356111');
 
--- INSERT INTO reservation VALUES (1111111, 'c1', 201, 2, '2020-11-25', '2020-11-26');
--- INSERT INTO reservation VALUES (1111112, 'c2', 202, 1, '2020-11-26', '2020-11-27');
--- INSERT INTO reservation VALUES (1111113, 'c3', 602, 4, '2020-11-25', '2020-11-27');
+INSERT INTO reservation VALUES (1111111, 'c1', 201, 2, '2020-11-25', '2020-11-26');
+INSERT INTO reservation VALUES (1111112, 'c2', 202, 1, '2020-11-26', '2020-11-27');
+INSERT INTO reservation VALUES (1111113, 'c3', 602, 4, '2020-11-25', '2020-11-27');
