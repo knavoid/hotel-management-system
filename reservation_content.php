@@ -81,6 +81,12 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <style>
+        .danger {
+            font-size: 15px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -176,28 +182,24 @@
                     <?php
                         for ($i = 0; $i < $reserve_count; $i++) { ?>
 
-                            <!-- css 작업 부탁드립니다. -->
-                            <!--------------------------- 예약 1개 --------------------------->
 
                             <div style="margin-bottom: 30px;">
-                                <h2>Reservation Code: <?= $reservation_code[$i] ?></h2>
-    
-                                <p>Guests: <?= $num_guests[$i] ?> </p>
-                                
-                                <p>Room Number: <?= $rooms[$i] ?> </p>
-    
-                                <p>Period: <?= $dates[$i][0] ?> ~ <?= $dates[$i][count($dates[$i]) - 1] ?> </p>
+                                <h2>Reservation No. <?= $reservation_code[$i] ?></h2>
+                                <div style="margin-bottom: 20px;">
+                                    <p>Guests : <?= $num_guests[$i] ?> </p>
+                                    <p>Room Number : <?= $rooms[$i] ?> </p>
+                                    <p>Period : <?= $dates[$i][0] ?> ~ <?= $dates[$i][count($dates[$i]) - 1] ?> </p>
+                                </div>
 
-                                <form action="action/reservation_cancel.php" method="post">
+                                <form action="action/reservation_cancel.php" method="post" style="">
                                     <input type="hidden" name="reservation_code" value="<?= $reservation_code[$i] ?>">
-                                    <input type="submit" value="Cancel">
+                                    <button class="genric-btn danger radius">Cancel Reservation ></button>
                                 </form>
 
                                 <hr>
 
                             </div>
 
-                            <!------------------------------------------------------------->
 
                         <?php }
                     ?>

@@ -71,9 +71,27 @@
             border-top: 1px solid #444444;
             border-collapse: collapse;
         }
+
         th, td {
             border-bottom: 1px solid #444444;
             padding: 10px;
+        }
+
+        #select_personnel {
+            width: 48%;
+            float: left;
+        }
+
+        #price_table {
+            float: right;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            padding-left: 40px;
+            border-left: 1px solid gray;
+        }
+
+        .success {
+            margin: 20px 0 15px 370px;
         }
     </style>
 </head>
@@ -169,57 +187,63 @@
                         <input type="hidden" name="cid" value="<?= $_POST['cid']; ?>">
                         <input type="hidden" name="cod" value="<?= $_POST['cod']; ?>">
 
-                        <?php for ($i = 0; $i < count($rooms); $i++) { ?>
-                            <div id="btn_group"> 
-                                <h3 class="rooms_text">Room <?= $rooms[$i] ?>
-                                    <input type="button" value="-" id="test_btn1" onclick="guest_decrease<?= $i+1 ?>()">
-                                    <input type="text" name="guests<?= $i+1 ?>" value="1" id="guest_num<?= $i+1 ?>">
-                                    <input type="button" value="+" id="test_btn2" onclick="guest_increase<?= $i+1 ?>()">
-                                </h3>
+                        <div style="overflow:hidden;">
+                        
+                            <div id="select_personnel">
+                                <div class ="about_text col-lg-10"><h2 style="margin-bottom: 20px;">Setting the number of guests</h2></div>
+                                <?php for ($i = 0; $i < count($rooms); $i++) { ?>
+                                    <div id="btn_group"> 
+                                        <h3 class="rooms_text">Room <?= $rooms[$i] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="button" value="-" id="test_btn1" onclick="guest_decrease<?= $i+1 ?>()">
+                                            <input type="text" name="guests<?= $i+1 ?>" value="1" id="guest_num<?= $i+1 ?>">
+                                            <input type="button" value="+" id="test_btn2" onclick="guest_increase<?= $i+1 ?>()">
+                                        </h3>
+                                    </div>
+                                <?php } ?>
                             </div>
-                        <?php } ?>
-                    
-                        <div>
-                            <div>
-                                <p>
-                                    <?= $nights + 1 ?>days <?= $nights ?>
-                                    <?php if ($nights == 1) { ?>
-                                        night
-                                    <?php } else { ?>
-                                        nights
-                                    <?php } ?> / <?= count($rooms) ?>
-                                    <?php if ($rooms == 1) { ?>
-                                        room
-                                    <?php } else { ?>
-                                        rooms
-                                    <?php } ?>
-                                </p>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Room Type</th><th>Price</th><th>Limit</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Standard</td><td>₩120,000</td><td>2 people</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Delux</td><td>₩180,000</td><td>2 people</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Family</td><td>₩270,000</td><td>4 people</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p style="font-size:13px;">* If the limit is exceeded, an additional charge of ₩22,000 per person will be charged.</p>
+                        
+                            <div id="price_table">
+                                <div>
+                                    <p>
+                                        <?= $nights + 1 ?>days <?= $nights ?>
+                                        <?php if ($nights == 1) { ?>
+                                            night
+                                        <?php } else { ?>
+                                            nights
+                                        <?php } ?> / <?= count($rooms) ?>
+                                        <?php if ($rooms == 1) { ?>
+                                            room
+                                        <?php } else { ?>
+                                            rooms
+                                        <?php } ?>
+                                    </p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Room Type</th><th>Price</th><th>Limit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Standard</td><td>₩120,000</td><td>2 people</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Delux</td><td>₩180,000</td><td>2 people</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Family</td><td>₩270,000</td><td>4 people</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p style="font-size:13px;">* If the limit is exceeded, an additional charge of ₩22,000 per person will be charged.</p>
+                                </div>
+                                <h3>Order Rooms Total<b style="margin-left:133px;">₩</b><b class="price1"><?=$price * $nights?></b></h3>
+                                <h3>Additional Payment<b style="margin-left:126px;">₩</b><b class="price2">0</b></h3>
+                                <h3>Amount Paid<b style="margin-left:200px;">₩</b><b class="price3"></b></h3>
+                                <button class="genric-btn success radius">Next ></button>
                             </div>
-                            <h3>Order Rooms Total<b style="margin-left:133px;">₩</b><b class="price1"><?=$price * $nights?></b></h3>
-                            <h3>Additional Payment<b style="margin-left:126px;">₩</b><b class="price2">0</b></h3>
-                            <h3>Amount Paid<b style="margin-left:200px;">₩</b><b class="price3"></b></h3>
-                        </div>
 
-                        <input type="submit" value="book">
+                        </div>
 
 
                     </form>

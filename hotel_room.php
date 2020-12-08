@@ -93,11 +93,11 @@
                                 </ul>
                             </div>
                             <?php if (isset($_SESSION['customer_name'])) { ?>
-                                    <p style="margin-right:10px;">Welcome, <?= $_SESSION['customer_name'] ?></p>
-                                    <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
-                                <?php } else {?>
-                                    <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
-                                <?php } ?>
+                                <p style="margin-right:10px;">Welcome, <?= $_SESSION['customer_name'] ?></p>
+                                <a href="action/guest_signout.php" class="btn_1 d-none d-lg-block">Sign Out</a>
+                            <?php } else {?>
+                                <a href="guest_signin_page.php" class="btn_1 d-none d-lg-block">Sign In</a>
+                            <?php } ?>
                         </nav>
                     </div>
                 </div>
@@ -355,8 +355,7 @@
                 </div>
                 
                 <!-- 아래 input버튼이 계속 생성되지 않아 임시로 제작하였습니다. -->
-                <button style="width:100px;height:100px;">Book</button>
-                <input type="submit" class = "btn_1 topic" value="다음 단계로">
+                <button class="genric-btn success radius">Next ></button>
                 
             </form>
 
